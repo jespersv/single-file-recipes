@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recept</title>
+  <meta name="description" content="En enkel receptsamling för att enkelt hitta och följa dina favoritrecept">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background-color: #f5f5f5;
+      color: #111;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+
+    header {
+      padding-top: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+      color: #111;
+    }
+
+    .search-container {
+      position: relative;
+      margin-bottom: 2rem;
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 0.75rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #666;
+      width: 16px;
+      height: 16px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+      font-size: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 0.5rem;
+      background: white;
+      color: #111;
+    }
+
+    input[type="text"]:focus {
+      outline: none;
+      border-color: #111;
+    }
+
+    input[type="text"]::placeholder {
+      color: #888;
+    }
+
+    .recipe-card {
+      background: white;
+      border-radius: 0.75rem;
+      padding: 1rem;
+      margin-bottom: 0.75rem;
+      cursor: pointer;
+      border: 1px solid #e5e5e5;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+      transition: background-color 0.2s;
+    }
+
+    .recipe-card:hover {
+      background-color: #fafafa;
+    }
+
+    .recipe-card h2 {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: #111;
+      margin-bottom: 0.25rem;
+    }
+
+    .recipe-meta {
+      font-size: 0.875rem;
+      color: #666;
+    }
+
+    .detail-view {
+      display: none;
+    }
+
+    .detail-view.active {
+      display: block;
+    }
+
+    .list-view {
+      display: block;
+    }
+
+    .list-view.hidden {
+      display: none;
+    }
+
+    .back-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      margin-bottom: 1rem;
+      background: transparent;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      font-size: 1rem;
+      color: #111;
+      transition: background-color 0.2s;
+    }
+
+    .back-button:hover {
+      background-color: #f0f0f0;
+    }
+
+    .recipe-detail-card {
+      background: white;
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      border: 1px solid #e5e5e5;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .recipe-detail-card h1 {
+      font-size: 1.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-title {
+      font-size: 1.125rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      color: #111;
+    }
+
+    .ingredients-section {
+      margin-bottom: 2rem;
+    }
+
+    .ingredient {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+      color: #111;
+    }
+
+    .ingredient-amount {
+      min-width: 60px;
+      color: #666;
+    }
+
+    .instructions-section ol {
+      list-style: none;
+      counter-reset: step-counter;
+    }
+
+    .instruction {
+      display: flex;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+      counter-increment: step-counter;
+    }
+
+    .step-number {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 1.5rem;
+      background: #111;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+
+    .step-number::before {
+      content: counter(step-counter);
+    }
+
+    .instruction-text {
+      padding-top: 0.125rem;
+    }
+
+    .no-results {
+      text-align: center;
+      color: #666;
+      padding: 2rem 0;
+    }
+
+    .arrow-icon {
+      width: 16px;
+      height: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- List View -->
+    <div id="list-view" class="list-view">
+      <header>
+        <h1>Recept</h1>
+        <div class="search-container">
+          <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+          <input type="text" id="search" placeholder="Sök recept...">
+        </div>
+      </header>
+      <div id="recipe-list"></div>
+      <div id="no-results" class="no-results" style="display: none;">
+        Inga recept hittades
+      </div>
+    </div>
+
+    <!-- Detail View -->
+    <div id="detail-view" class="detail-view">
+      <button class="back-button" id="back-button">
+        <svg class="arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+        </svg>
+        Tillbaka
+      </button>
+      <div class="recipe-detail-card" id="recipe-detail"></div>
+    </div>
+  </div>
+
+  <script>
+    // Recipe data
+    const recipes = [
+      {
+        id: "1",
+        header: "Indisk gryta",
+        ingredients: [
+          { amount: 100, unit: "grams", unitSymbol: "g", ingredientName: "smör" },
+          { amount: 1, unit: "tablespoon", unitSymbol: "msk", ingredientName: "olja" },
+          { amount: 2, unit: "pieces", unitSymbol: "st", ingredientName: "gula lökar, hackade" },
+          { amount: 4, unit: "cloves", unitSymbol: "klyftor", ingredientName: "vitlök, pressade" },
+          { amount: 50, unit: "grams", unitSymbol: "g", ingredientName: "färsk ingefära, riven" },
+          { amount: 2, unit: "tablespoon", unitSymbol: "msk", ingredientName: "garam masala" },
+          { amount: 1, unit: "tablespoon", unitSymbol: "msk", ingredientName: "gurkmeja" },
+          { amount: 1, unit: "tablespoon", unitSymbol: "msk", ingredientName: "spiskummin" },
+          { amount: 3, unit: "tablespoon", unitSymbol: "msk", ingredientName: "tomatpuré" },
+          { amount: 800, unit: "grams", unitSymbol: "g", ingredientName: "krossade tomater" },
+          { amount: 400, unit: "milliliters", unitSymbol: "ml", ingredientName: "kokosmjölk" },
+          { amount: 600, unit: "grams", unitSymbol: "g", ingredientName: "kycklingfilé, tärnad" },
+          { amount: 1, unit: "pieces", unitSymbol: "st", ingredientName: "salt och peppar" }
+        ],
+        instructions: [
+          { stepNumber: 1, instruction: "Fräs lök, vitlök och ingefära i smör och olja tills löken är mjuk" },
+          { stepNumber: 2, instruction: "Tillsätt kryddor och tomatpuré, fräs i 1 minut" },
+          { stepNumber: 3, instruction: "Häll i krossade tomater och kokosmjölk, låt sjuda i 10 minuter" },
+          { stepNumber: 4, instruction: "Tillsätt kycklingen och låt koka tills den är genomstekt, ca 15-20 minuter" },
+          { stepNumber: 5, instruction: "Smaka av med salt och peppar. Servera med ris eller naanbröd" }
+        ]
+      },
+      {
+        id: "2",
+        header: "Klassisk köttfärssås",
+        ingredients: [
+          { amount: 500, unit: "grams", unitSymbol: "g", ingredientName: "nötfärs" },
+          { amount: 1, unit: "pieces", unitSymbol: "st", ingredientName: "gul lök, hackad" },
+          { amount: 2, unit: "cloves", unitSymbol: "klyftor", ingredientName: "vitlök, pressade" },
+          { amount: 400, unit: "grams", unitSymbol: "g", ingredientName: "krossade tomater" },
+          { amount: 2, unit: "tablespoon", unitSymbol: "msk", ingredientName: "tomatpuré" },
+          { amount: 2, unit: "teaspoon", unitSymbol: "tsk", ingredientName: "oregano" },
+          { amount: 1, unit: "teaspoon", unitSymbol: "tsk", ingredientName: "basilika" },
+          { amount: 1, unit: "pieces", unitSymbol: "st", ingredientName: "salt och peppar" }
+        ],
+        instructions: [
+          { stepNumber: 1, instruction: "Bryn färsen i en kastrull på hög värme tills den får färg" },
+          { stepNumber: 2, instruction: "Tillsätt lök och vitlök, fräs i 2-3 minuter" },
+          { stepNumber: 3, instruction: "Tillsätt tomatpuré och fräs i 1 minut" },
+          { stepNumber: 4, instruction: "Häll i krossade tomater och kryddor" },
+          { stepNumber: 5, instruction: "Låt sjuda i minst 20 minuter. Smaka av med salt och peppar" }
+        ]
+      },
+      {
+        id: "3",
+        header: "Pannkakor",
+        ingredients: [
+          { amount: 3, unit: "pieces", unitSymbol: "st", ingredientName: "ägg" },
+          { amount: 300, unit: "milliliters", unitSymbol: "ml", ingredientName: "mjöl" },
+          { amount: 600, unit: "milliliters", unitSymbol: "ml", ingredientName: "mjölk" },
+          { amount: 0.5, unit: "teaspoon", unitSymbol: "tsk", ingredientName: "salt" },
+          { amount: 2, unit: "tablespoon", unitSymbol: "msk", ingredientName: "smör, smält" }
+        ],
+        instructions: [
+          { stepNumber: 1, instruction: "Vispa ihop ägg och hälften av mjölken" },
+          { stepNumber: 2, instruction: "Tillsätt mjöl och salt, vispa tills smeten är slät" },
+          { stepNumber: 3, instruction: "Rör ner resten av mjölken och det smälta smöret" },
+          { stepNumber: 4, instruction: "Låt smeten vila i 30 minuter om möjligt" },
+          { stepNumber: 5, instruction: "Stek tunna pannkakor i smör på medelvärme" }
+        ]
+      },
+      {
+        id: "4",
+        header: "Caesarsallad",
+        ingredients: [
+          { amount: 2, unit: "pieces", unitSymbol: "st", ingredientName: "romansallad" },
+          { amount: 300, unit: "grams", unitSymbol: "g", ingredientName: "kycklingfilé" },
+          { amount: 100, unit: "grams", unitSymbol: "g", ingredientName: "parmesanost" },
+          { amount: 100, unit: "grams", unitSymbol: "g", ingredientName: "krutonger" },
+          { amount: 150, unit: "milliliters", unitSymbol: "ml", ingredientName: "caesardressing" },
+          { amount: 1, unit: "pieces", unitSymbol: "st", ingredientName: "salt och peppar" }
+        ],
+        instructions: [
+          { stepNumber: 1, instruction: "Krydda kycklingfiléerna med salt och peppar" },
+          { stepNumber: 2, instruction: "Stek kycklingen tills den är genomstekt, låt svalna och skär i strimlor" },
+          { stepNumber: 3, instruction: "Skölj och dela salladen i lagom stora bitar" },
+          { stepNumber: 4, instruction: "Blanda sallad, kyckling, krutonger och dressing" },
+          { stepNumber: 5, instruction: "Toppa med riven parmesan och servera" }
+        ]
+      }
+    ];
+
+    // State
+    let currentRecipe = null;
+
+    // DOM elements
+    const listView = document.getElementById('list-view');
+    const detailView = document.getElementById('detail-view');
+    const recipeList = document.getElementById('recipe-list');
+    const recipeDetail = document.getElementById('recipe-detail');
+    const searchInput = document.getElementById('search');
+    const backButton = document.getElementById('back-button');
+    const noResults = document.getElementById('no-results');
+
+    // Render recipe list
+    function renderRecipeList(filteredRecipes) {
+      recipeList.innerHTML = '';
+      
+      if (filteredRecipes.length === 0) {
+        noResults.style.display = 'block';
+        return;
+      }
+      
+      noResults.style.display = 'none';
+      
+      filteredRecipes.forEach(recipe => {
+        const card = document.createElement('div');
+        card.className = 'recipe-card';
+        card.innerHTML = `
+          <h2>${recipe.header}</h2>
+          <p class="recipe-meta">${recipe.ingredients.length} ingredienser · ${recipe.instructions.length} steg</p>
+        `;
+        card.addEventListener('click', () => showRecipeDetail(recipe));
+        recipeList.appendChild(card);
+      });
+    }
+
+    // Show recipe detail
+    function showRecipeDetail(recipe) {
+      currentRecipe = recipe;
+      
+      const ingredientsHtml = recipe.ingredients.map(ing => `
+        <div class="ingredient">
+          <span class="ingredient-amount">${ing.amount} ${ing.unitSymbol}</span>
+          <span>${ing.ingredientName}</span>
+        </div>
+      `).join('');
+      
+      const instructionsHtml = recipe.instructions.map(inst => `
+        <li class="instruction">
+          <span class="step-number"></span>
+          <span class="instruction-text">${inst.instruction}</span>
+        </li>
+      `).join('');
+      
+      recipeDetail.innerHTML = `
+        <h1>${recipe.header}</h1>
+        <div class="ingredients-section">
+          <h2 class="section-title">Ingredienser</h2>
+          ${ingredientsHtml}
+        </div>
+        <div class="instructions-section">
+          <h2 class="section-title">Instruktioner</h2>
+          <ol>${instructionsHtml}</ol>
+        </div>
+      `;
+      
+      listView.classList.add('hidden');
+      detailView.classList.add('active');
+    }
+
+    // Show recipe list
+    function showRecipeList() {
+      currentRecipe = null;
+      listView.classList.remove('hidden');
+      detailView.classList.remove('active');
+    }
+
+    // Filter recipes
+    function filterRecipes(query) {
+      const filtered = recipes.filter(recipe =>
+        recipe.header.toLowerCase().includes(query.toLowerCase())
+      );
+      renderRecipeList(filtered);
+    }
+
+    // Event listeners
+    searchInput.addEventListener('input', (e) => {
+      filterRecipes(e.target.value);
+    });
+
+    backButton.addEventListener('click', showRecipeList);
+
+    // Initial render
+    renderRecipeList(recipes);
+  </script>
+</body>
+</html>
