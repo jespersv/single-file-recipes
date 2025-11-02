@@ -3,8 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+  <meta charset="utf-8" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="theme-color" content="#ffcebf" />
+  <meta name="msapplication-navbutton-color" content="#ffcebf" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <title>Recept</title>
-  <meta name="description" content="En enkel receptsamling för att enkelt hitta och följa dina favoritrecept">
+  <meta name="description" content="En enkel receptsamling.">
+
   <style>
     * {
       margin: 0;
@@ -144,6 +152,7 @@
     .recipe-detail-card h1 {
       font-size: 1.75rem;
       margin-bottom: 1.5rem;
+      line-height: 2.5rem;
     }
 
     .section-title {
@@ -157,10 +166,13 @@
       margin-bottom: 2rem;
     }
 
+    .ingredients-section .ingredient-group {
+      margin-bottom: 1rem; /* space between groups */
+    }
+    
     .ingredient {
       display: flex;
       gap: 0.5rem;
-      margin-bottom: 0.5rem;
       color: #111;
     }
 
@@ -177,7 +189,6 @@
     .instruction {
       display: flex;
       gap: 0.75rem;
-      margin-bottom: 0.75rem;
       counter-increment: step-counter;
     }
 
@@ -203,6 +214,24 @@
       padding-top: 0.125rem;
     }
 
+    /* Cross-highlight styles */
+    .ingredient-group,
+    .instruction {
+      cursor: pointer;
+      padding: 0.25rem 0.5rem;
+    }
+    .ingredient-group.highlighted {
+      background: #fffbe6; /* subtle yellow */
+      border-radius: 0.5rem;
+    }
+    .instruction.highlighted {
+      background: #eef6ff; /* subtle blue */
+      border-radius: 0.5rem;
+    }
+    .instruction.highlighted .step-number {
+      background: #0b5ed7; /* stronger blue for number */
+    }
+
     .no-results {
       text-align: center;
       color: #666;
@@ -220,7 +249,7 @@
     <!-- List View -->
     <div id="list-view" class="list-view">
       <header>
-        <h1>Recept</h1>
+        <h1>Recipes</h1>
         <div class="search-container">
           <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
@@ -230,7 +259,7 @@
       </header>
       <div id="recipe-list"></div>
       <div id="no-results" class="no-results" style="display: none;">
-        Inga recept hittades
+        No recipes found
       </div>
     </div>
 
@@ -240,7 +269,7 @@
         <svg class="arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
         </svg>
-        Tillbaka
+        Back
       </button>
       <div class="recipe-detail-card" id="recipe-detail"></div>
     </div>
@@ -250,89 +279,288 @@
     // Recipe data
     const recipes = [
       {
-        id: "1",
-        header: "Indisk gryta",
+        id: 1,
+        title: "Indisk gryta",
+        serves: 4,
         ingredients: [
-          { amount: 100, unit: "grams", unitSymbol: "g", ingredientName: "smör" },
-          { amount: 1, unit: "tablespoon", unitSymbol: "msk", ingredientName: "olja" },
-          { amount: 2, unit: "pieces", unitSymbol: "st", ingredientName: "gula lökar, hackade" },
-          { amount: 4, unit: "cloves", unitSymbol: "klyftor", ingredientName: "vitlök, pressade" },
-          { amount: 50, unit: "grams", unitSymbol: "g", ingredientName: "färsk ingefära, riven" },
-          { amount: 2, unit: "tablespoon", unitSymbol: "msk", ingredientName: "garam masala" },
-          { amount: 1, unit: "tablespoon", unitSymbol: "msk", ingredientName: "gurkmeja" },
-          { amount: 1, unit: "tablespoon", unitSymbol: "msk", ingredientName: "spiskummin" },
-          { amount: 3, unit: "tablespoon", unitSymbol: "msk", ingredientName: "tomatpuré" },
-          { amount: 800, unit: "grams", unitSymbol: "g", ingredientName: "krossade tomater" },
-          { amount: 400, unit: "milliliters", unitSymbol: "ml", ingredientName: "kokosmjölk" },
-          { amount: 600, unit: "grams", unitSymbol: "g", ingredientName: "kycklingfilé, tärnad" },
-          { amount: 1, unit: "pieces", unitSymbol: "st", ingredientName: "salt och peppar" }
+          { groupId: 1, amount: 100, unit: "grams", unitSymbol: "g", ingredientName: "smör" },
+          { groupId: 1, amount: 1, unit: "tablespoon", unitSymbol: "msk", ingredientName: "olja" },
+          { groupId: 1, amount: 2, unit: "cloves", unitSymbol: "st", ingredientName: "vitlök" },
+          { groupId: 1, amount: 1, unit: "piece", unitSymbol: "st", ingredientName: "rödlök" },
+          { groupId: 1, amount: 2, unit: "teaspoon", unitSymbol: "tsk", ingredientName: "ingefära" },
+          { groupId: 2, amount: 1, unit: "tablespoon", unitSymbol: "msk", ingredientName: "tomatpuré" },
+          { groupId: 2, amount: null, unit: null, unitSymbol: null, ingredientName: "koriander, pulver" },
+          { groupId: 2, amount: null, unit: null, unitSymbol: null, ingredientName: "korianderfrön" },
+          { groupId: 2, amount: null, unit: null, unitSymbol: null, ingredientName: "chili" },
+          { groupId: 2, amount: null, unit: null, unitSymbol: null, ingredientName: "socker" },
+          { groupId: 2, amount: null, unit: null, unitSymbol: null, ingredientName: "salt" },
+          { groupId: 2, amount: null, unit: null, unitSymbol: null, ingredientName: "peppar" },
+          { groupId: 2, amount: null, unit: null, unitSymbol: null, ingredientName: "curry" },
+          { groupId: 2, amount: null, unit: null, unitSymbol: null, ingredientName: "kummin" },
+          { groupId: 3, amount: 1, unit: "piece", unitSymbol: "st", ingredientName: "tomat" },
+          { groupId: 3, amount: 1, unit: "piece", unitSymbol: "st", ingredientName: "paprika" },
+          { groupId: 4, amount: 400, unit: "g", unitSymbol: "g", ingredientName: "krossad tomat" },
+          { groupId: 5, amount: 2, unit: "dl", unitSymbol: "dl", ingredientName: "röda linser" },
+          { groupId: 6, amount: 2, unit: "piece", unitSymbol: "st", ingredientName: "kyckling" },
+          { groupId: 7, amount: 2, nit: "dl", unitSymbol: "dl", ingredientName: "yoghurt" }
         ],
         instructions: [
-          { stepNumber: 1, instruction: "Fräs lök, vitlök och ingefära i smör och olja tills löken är mjuk" },
-          { stepNumber: 2, instruction: "Tillsätt kryddor och tomatpuré, fräs i 1 minut" },
-          { stepNumber: 3, instruction: "Häll i krossade tomater och kokosmjölk, låt sjuda i 10 minuter" },
-          { stepNumber: 4, instruction: "Tillsätt kycklingen och låt koka tills den är genomstekt, ca 15-20 minuter" },
-          { stepNumber: 5, instruction: "Smaka av med salt och peppar. Servera med ris eller naanbröd" }
+          { groupId: 1, stepNumber: 1, instruction: "Hack och fräs lök, vitlök, ingefära i smör." },
+          { groupId: 2, stepNumber: 2, instruction: "Tillsätt kryddor och tomatpuré." },
+          { groupId: 3, stepNumber: 3, instruction: "Hack och fräs snabbt till tomat och paprika." },
+          { groupId: 4, stepNumber: 4, instruction: "Häll i krossad tomat och vatten." },
+          { groupId: 5, stepNumber: 5, instruction: "Tillsätt linser." },
+          { groupId: 6, stepNumber: 6, instruction: "Tärna och lägg i kycklingen." },
+          { groupId: 7, stepNumber: 7, instruction: "Tillsätt yoghurt och låt koka in.." }
         ]
       },
       {
-        id: "2",
-        header: "Klassisk köttfärssås",
-        ingredients: [
-          { amount: 500, unit: "grams", unitSymbol: "g", ingredientName: "nötfärs" },
-          { amount: 1, unit: "pieces", unitSymbol: "st", ingredientName: "gul lök, hackad" },
-          { amount: 2, unit: "cloves", unitSymbol: "klyftor", ingredientName: "vitlök, pressade" },
-          { amount: 400, unit: "grams", unitSymbol: "g", ingredientName: "krossade tomater" },
-          { amount: 2, unit: "tablespoon", unitSymbol: "msk", ingredientName: "tomatpuré" },
-          { amount: 2, unit: "teaspoon", unitSymbol: "tsk", ingredientName: "oregano" },
-          { amount: 1, unit: "teaspoon", unitSymbol: "tsk", ingredientName: "basilika" },
-          { amount: 1, unit: "pieces", unitSymbol: "st", ingredientName: "salt och peppar" }
-        ],
-        instructions: [
-          { stepNumber: 1, instruction: "Bryn färsen i en kastrull på hög värme tills den får färg" },
-          { stepNumber: 2, instruction: "Tillsätt lök och vitlök, fräs i 2-3 minuter" },
-          { stepNumber: 3, instruction: "Tillsätt tomatpuré och fräs i 1 minut" },
-          { stepNumber: 4, instruction: "Häll i krossade tomater och kryddor" },
-          { stepNumber: 5, instruction: "Låt sjuda i minst 20 minuter. Smaka av med salt och peppar" }
-        ]
-      },
-      {
-        id: "3",
-        header: "Pannkakor",
-        ingredients: [
-          { amount: 3, unit: "pieces", unitSymbol: "st", ingredientName: "ägg" },
-          { amount: 300, unit: "milliliters", unitSymbol: "ml", ingredientName: "mjöl" },
-          { amount: 600, unit: "milliliters", unitSymbol: "ml", ingredientName: "mjölk" },
-          { amount: 0.5, unit: "teaspoon", unitSymbol: "tsk", ingredientName: "salt" },
-          { amount: 2, unit: "tablespoon", unitSymbol: "msk", ingredientName: "smör, smält" }
-        ],
-        instructions: [
-          { stepNumber: 1, instruction: "Vispa ihop ägg och hälften av mjölken" },
-          { stepNumber: 2, instruction: "Tillsätt mjöl och salt, vispa tills smeten är slät" },
-          { stepNumber: 3, instruction: "Rör ner resten av mjölken och det smälta smöret" },
-          { stepNumber: 4, instruction: "Låt smeten vila i 30 minuter om möjligt" },
-          { stepNumber: 5, instruction: "Stek tunna pannkakor i smör på medelvärme" }
-        ]
-      },
-      {
-        id: "4",
-        header: "Caesarsallad",
-        ingredients: [
-          { amount: 2, unit: "pieces", unitSymbol: "st", ingredientName: "romansallad" },
-          { amount: 300, unit: "grams", unitSymbol: "g", ingredientName: "kycklingfilé" },
-          { amount: 100, unit: "grams", unitSymbol: "g", ingredientName: "parmesanost" },
-          { amount: 100, unit: "grams", unitSymbol: "g", ingredientName: "krutonger" },
-          { amount: 150, unit: "milliliters", unitSymbol: "ml", ingredientName: "caesardressing" },
-          { amount: 1, unit: "pieces", unitSymbol: "st", ingredientName: "salt och peppar" }
-        ],
-        instructions: [
-          { stepNumber: 1, instruction: "Krydda kycklingfiléerna med salt och peppar" },
-          { stepNumber: 2, instruction: "Stek kycklingen tills den är genomstekt, låt svalna och skär i strimlor" },
-          { stepNumber: 3, instruction: "Skölj och dela salladen i lagom stora bitar" },
-          { stepNumber: 4, instruction: "Blanda sallad, kyckling, krutonger och dressing" },
-          { stepNumber: 5, instruction: "Toppa med riven parmesan och servera" }
-        ]
-      }
+      id: 2,
+      title: "Curry- & kycklingsås och pasta",
+      serves: 5,
+      ingredients: [
+        { groupId: 1, amount: 500, unit: "grams", unitSymbol: "g", ingredientName: "pasta" },
+        { groupId: 2, amount: null, unit: null, unitSymbol: null, ingredientName: "smör" },
+        { groupId: 2, amount: 1, unit: "piece", unitSymbol: "st", ingredientName: "lök" },
+        { groupId: 2, amount: 1, unit: "clove", unitSymbol: "st", ingredientName: "vitlök" },
+        { groupId: 3, amount: 500, unit: "grams", unitSymbol: "g", ingredientName: "kycklingfilé" },
+        { groupId: 3, amount: 1.5, unit: "tablespoons", unitSymbol: "msk", ingredientName: "kycklingfond" },
+        { groupId: 4, amount: 4, unit: "deciliters", unitSymbol: "dl", ingredientName: "crème fraiche" },
+        { groupId: 4, amount: 1, unit: "deciliter", unitSymbol: "dl", ingredientName: "grädde" },
+        { groupId: 5, amount: 1, unit: "tablespoon", unitSymbol: "msk", ingredientName: "curry" },
+        { groupId: 5, amount: 1, unit: "tablespoon", unitSymbol: "msk", ingredientName: "paprika" },
+        { groupId: 5, amount: null, unit: null, unitSymbol: null, ingredientName: "salt" },
+        { groupId: 5, amount: null, unit: null, unitSymbol: null, ingredientName: "peppar" },
+        { groupId: 5, amount: null, unit: null, unitSymbol: null, ingredientName: "Sriracha" },
+        { groupId: 6, amount: null, unit: null, unitSymbol: null, ingredientName: "majsmjöl" },
+        { groupId: 6, amount: null, unit: null, unitSymbol: null, ingredientName: "vatten" }
+      ],
+      "instructions": [
+        { groupId: 1, stepNumber: 1, instruction: "Koka pastan enligt ansviningar." },
+        { groupId: 3, stepNumber: 2, instruction: "Grovhacka lök och vitlök, stek mjukt i smör." },
+        { groupId: 5, stepNumber: 3, instruction: "Tillsätt kryddor och stek i en minut." },
+        { groupId: 2, stepNumber: 4, instruction: "Skär kycklingen i lagom stora bitar och lägg i pannan." },
+        { groupId: 2, stepNumber: 5, instruction: "Stek tills kycklingen är färdig och häll på kycklingfonden." },
+        { groupId: 4, stepNumber: 6, instruction: "Låt koka lätt och tillsätt grädde samt crème fraiche." },
+        { groupId: 5, stepNumber: 7, instruction: "Smaka av med salt, peppar och Sriracha." },
+        { groupId: 6, stepNumber: 8, instruction: "Om såsen blir för lös, toppred av med majsmjöl utrört i lite vatten." }
+      ]
+    },
+    {
+      id: 3,
+      title: "BBQ Beans",
+      serves: 4,
+      ingredients: [
+        { groupId: 1, amount: 400, unit: "grams", unitSymbol: "g", ingredientName: "mix bönor" },
+        { groupId: 1, amount: 1, unit: "slice", unitSymbol: "st", ingredientName: "baccon, skivad" },
+        { groupId: 2, amount: 1, unit: "piece", unitSymbol: "st", ingredientName: "gul lök" },
+        { groupId: 2, amount: 2, unit: "tablespoons", unitSymbol: "msk", ingredientName: "grön paprika" },
+        { groupId: 2, amount: 1, unit: "tablespoon", unitSymbol: "msk", ingredientName: "jalapeño" },
+        { groupId: 2, amount: 1, unit: "clove", unitSymbol: "st", ingredientName: "vitlök" },
+        { groupId: 3, amount: 2.5, unit: "deciliters", unitSymbol: "dl", ingredientName: "ketchup" },
+        { groupId: 3, amount: 2, unit: "tablespoons", unitSymbol: "msk", ingredientName: "tomatpure" },
+        { groupId: 3, amount: "1–2", unit: "deciliters", unitSymbol: "dl", ingredientName: "bruntsocker" },
+        { groupId: 3, amount: 1.5, unit: "deciliters", unitSymbol: "dl", ingredientName: "äppeljuice" },
+        { groupId: 3, amount: 0.5, unit: "deciliter", unitSymbol: "dl", ingredientName: "honung" },
+        { groupId: 3, amount: 2, unit: "tablespoons", unitSymbol: "msk", ingredientName: "mörksirap" },
+        { groupId: 3, amount: 1, unit: "tablespoon", unitSymbol: "msk", ingredientName: "äppel cider vinäger" },
+        { groupId: 3, amount: 1, unit: "tablespoon", unitSymbol: "msk", ingredientName: "bbq rub" },
+        { groupId: 3, amount: 1, unit: "tablespoon", unitSymbol: "msk", ingredientName: "gul senap" },
+        { groupId: 3, amount: 1, unit: "tablespoon", unitSymbol: "msk", ingredientName: "hot sauce" },
+        { groupId: 3, amount: "1–2", unit: "drops", unitSymbol: "droppar", ingredientName: "liquid smoke" },
+
+        { groupId: 4, amount: null, unit: null, unitSymbol: null, ingredientName: "salt" },
+        { groupId: 4, amount: null, unit: null, unitSymbol: null, ingredientName: "svart pepper" }
+      ],
+      "instructions": [
+        { groupId: 0, stepNumber: 1, instruction: "Förvarm ugnen till 150°C." },
+        { groupId: 1, stepNumber: 2, instruction: "Hack och stek baccon tills knaprig. Lyft ur pannan men spara fetet." },
+        { groupId: 2, stepNumber: 3, instruction: "Lägg i finhackade löken och stek till brun runt kanterna, ca 7m." },
+        { groupId: 2, stepNumber: 4, instruction: "Lägg i finhackad grön paprika, jalapeño, och vitlök. Stek ca 1m, tills mjuknat." },
+        { groupId: 3, stepNumber: 5, instruction: "Tillsätt ketchup, brunsocker, äppeljuice, honung, sirap,vinäger, BBQ rub, senap, hot sauce, liquid smoke, och den steka baconen. Få det att börja putra." },
+        { groupId: 1, stepNumber: 6, instruction: "Vänd ner avrunna bönorna och blanda." },
+        { groupId: 4, stepNumber: 7, instruction: "Sätt in pannan i ugnen i ca 50m. Låt därefter vila ca 15m innan servering." },
+        { groupId: 3, stepNumber: 8, instruction: "Smaka av med salt och peppar innan servering." }
+      ]
+    },
+    {
+      id: 4,
+      title: "Julköttbullar",
+      serves: 50,
+      ingredients: [
+        { groupId: 1, amount: 500, unit: "grams", unitSymbol: "g", ingredientName: "nötfärs" },
+        { groupId: 1, amount: 2, unit: "pinches", unitSymbol: "krm", ingredientName: "kryddpeppar" },
+        { groupId: 1, amount: 1, unit: "piece", unitSymbol: "st", ingredientName: "kryddnejlika" },
+        { groupId: 1, amount: 2, unit: "pinches", unitSymbol: "krm", ingredientName: "svartpeppar" },
+        { groupId: 3, amount: 1, unit: "piece", unitSymbol: "st", ingredientName: "gul lök" },
+        { groupId: 3, amount: 1, unit: "tablespoon", unitSymbol: "msk", ingredientName: "smör" },
+        { groupId: 4, amount: 0.5, unit: "deciliter", unitSymbol: "dl", ingredientName: "ströbröd" },
+        { groupId: 4, amount: 0.5, unit: "deciliter", unitSymbol: "dl", ingredientName: "mjölk" },
+        { groupId: 4, amount: 1, unit: "piece", unitSymbol: "st", ingredientName: "ägg" },
+        { groupId: 4, amount: 2, unit: "tablespoons", unitSymbol: "msk", ingredientName: "kalvfond" },
+        { groupId: 5, amount: 2, unit: "deciliters", unitSymbol: "dl", ingredientName: "västerbottensost, riven" }
+      ],
+      "instructions": [
+        { groupId: 0, stepNumber: 1, instruction: "Förvärm ugnen till 250°C (över- och undervärme)." },
+        { groupId: 4, stepNumber: 2, instruction: "Blanda ägg, mjölk, ströbröd och kalvfond. Låt svälla i 5 minuter." },
+        { groupId: 3, stepNumber: 3, instruction: "Finhacka och fräs löken i smör tills mjuk." },
+        { groupId: 1, stepNumber: 4, instruction: "Blanda färs med kryddnejlika, kryddpeppar och svartpeppar." },
+        { groupId: 5, stepNumber: 5, instruction: "Tillsätt rivnen västerbottensosten och rör ihop allt till en smet." },
+        { groupId: 0, stepNumber: 6, instruction: "Rulla köttbullar med fuktiga händer och lägg på en oljad plåt." },
+        { groupId: 0, stepNumber: 7, instruction: "Stek i ugn 8–12 minuter vid 250°C, vänd efter cirka 7 minuter." }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Kallrökt laxpasta med pepparrot och fänkålssallad",
+      "serves": 4,
+      "ingredients": [
+        { "groupId": 1, "amount": 4, "unit": "portions", "unitSymbol": "port", "ingredientName": "pasta, t.ex. tagliatelle" },
+        { "groupId": 2, "amount": 125, "unit": "grams", "unitSymbol": "g", "ingredientName": "färskost med pepparrot" },
+        { "groupId": 2, "amount": 2, "unit": "deciliters", "unitSymbol": "dl", "ingredientName": "mjölk" },
+        { "groupId": 2, "amount": 400, "unit": "grams", "unitSymbol": "g", "ingredientName": "kallrökt lax" },
+        { "groupId": 3, "amount": 1, "unit": "half", "unitSymbol": "st", "ingredientName": "apelsin (saft och skal)" },
+        { "groupId": 3, "amount": 1, "unit": "tablespoon", "unitSymbol": "msk", "ingredientName": "olivolja" },
+        { "groupId": 3, "amount": null, "unit": null, "unitSymbol": null, "ingredientName": "salt och peppar" },
+        { "groupId": 4, "amount": 2, "unit": "fennel bulbs", "unitSymbol": "st", "ingredientName": "fänkål" },
+        { "groupId": 4, "amount": 2, "unit": "carrots", "unitSymbol": "st", "ingredientName": "morötter" }
+      ],
+      "instructions": [
+        { "groupId": 1, "stepNumber": 1, "instruction": "Sätt på en kastrull med vatten till pastan." },
+        { "groupId": 4, "stepNumber": 2, "instruction": "Fänkålssallad: Ansa och strimla fänkålen tunt. Skala morötterna och breda morotssnudlar med en potatisskalare." },
+        { "groupId": 3, "stepNumber": 3, "instruction": "Riv apelsinskalet och pressa saften. Blanda det med olivolja i en skål där grönsakerna får plats. Smaka av med salt och peppar." },
+        { "groupId": 1, "stepNumber": 4, "instruction": "Pasta: Koka pastan enligt anvisningarna på förpackningen. Låt den rinna av i ett durkslag. Värm färskosten och mjölken i pastakastrullen, krydda med salt och peppar, och vänd ner pastan." },
+        { "groupId": 4, "stepNumber": 5, "instruction": "Fänkålssallad: Låt fänkål och morotssnudlar rinna av ordentligt och vänd ner dem i dressingen." },
+        { "groupId": 2, "stepNumber": 6, "instruction": "Servera den varma pastan med kallrökt lax och fänkålssallad." }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Grön couscous med tomat och halloumi",
+      "serves": 4,
+      "ingredients": [
+        { "groupId": 1, "amount": 0.5, "unit": "stalk", "unitSymbol": "st", "ingredientName": "stjälkselleri (ca 45 g)" },
+        { "groupId": 1, "amount": 1, "unit": "piece", "unitSymbol": "st", "ingredientName": "röd peppar" },
+        { "groupId": 1, "amount": 1, "unit": "tablespoon", "unitSymbol": "msk", "ingredientName": "olja" },
+        { "groupId": 1, "amount": 1, "unit": "clove", "unitSymbol": "st", "ingredientName": "vitlök" },
+        { "groupId": 1, "amount": 1, "unit": "can", "unitSymbol": "burk", "ingredientName": "körsbärstomater (400 g)" },
+        { "groupId": 1, "amount": null, "unit": null, "unitSymbol": null, "ingredientName": "salt och peppar" },
+
+        { "groupId": 2, "amount": 65, "unit": "grams", "unitSymbol": "g", "ingredientName": "babyspenat" },
+        { "groupId": 2, "amount": 4, "unit": "portions", "unitSymbol": "port", "ingredientName": "couscous" },
+        { "groupId": 2, "amount": 0.5, "unit": "bunch", "unitSymbol": "knippe", "ingredientName": "persilja" },
+        { "groupId": 2, "amount": 1, "unit": "piece", "unitSymbol": "st", "ingredientName": "citron" },
+
+        { "groupId": 3, "amount": 400, "unit": "grams", "unitSymbol": "g", "ingredientName": "halloumi" },
+        { "groupId": 3, "amount": 1, "unit": "teaspoon", "unitSymbol": "tsk", "ingredientName": "olja (till stekning)" },
+        { "groupId": 4, "amount": 300, "unit": "grams", "unitSymbol": "g", "ingredientName": "svarta oliver" }
+      ],
+      "instructions": [
+        { "groupId": 1, "stepNumber": 1, "instruction": "Tomatsås: Ansa och strimla stjälksellerin fint. Dela, kärna ur och strimla chilin." },
+        { "groupId": 1, "stepNumber": 2, "instruction": "Fräs grönsakerna mjuka i olivolja i en kastrull. Pressa i vitlöken. Häll i tomaterna och låt sjuda ca 5 minuter. Smaka av med salt och peppar." },
+        { "groupId": 2, "stepNumber": 3, "instruction": "Couscous: Mixa spenat och couscous i en matberedare." },
+        { "groupId": 2, "stepNumber": 4, "instruction": "Hacka persiljan och riv skalet av citronen." },
+        { "groupId": 3, "stepNumber": 5, "instruction": "Halloumi: Skiva och stek halloumin i oljan i en stekpanna." },
+        { "groupId": 4, "stepNumber": 6, "instruction": "Låt oliverna rinna av." },
+        { "groupId": 2, "stepNumber": 7, "instruction": "Couscous: Vänd ner citronskalet och persiljan i couscousen och fluffa upp med en gaffel. Skär resten av citronen i klyftor." },
+        { "groupId": 5, "stepNumber": 8, "instruction": "Servera couscousen med tomatsås, halloumi, oliver och citronklyftor." }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Indisk kyckling (Tikka masala tomat)",
+      "serves": 4,
+      "ingredients": [
+        { "groupId": 1, "amount": 2, "unit": "tablespoons", "unitSymbol": "msk", "ingredientName": "smör" },
+        { "groupId": 1, "amount": 1, "unit": "piece", "unitSymbol": "st", "ingredientName": "gul lök" },
+        { "groupId": 1, "amount": 1, "unit": "piece", "unitSymbol": "st", "ingredientName": "potatis" },
+        { "groupId": 1, "amount": 2, "unit": "piece", "unitSymbol": "st", "ingredientName": "morot" },
+        { "groupId": 2, "amount": 2, "unit": "teaspoons", "unitSymbol": "tsk", "ingredientName": "kummin, stött" },
+        { "groupId": 2, "amount": 2, "unit": "tablespoons", "unitSymbol": "msk", "ingredientName": "tomatpuré" },
+        { "groupId": 3, "amount": 5, "unit": "deciliters", "unitSymbol": "dl", "ingredientName": "kycklingfond" },
+        { "groupId": 3, "amount": 2, "unit": "pieces", "unitSymbol": "st", "ingredientName": "kycklingbröst" },
+        { "groupId": 3, "amount": null, "unit": null, "unitSymbol": null, "ingredientName": "salt och peppar" },
+        { "groupId": 4, "amount": 2, "unit": "deciliters", "unitSymbol": "dl", "ingredientName": "crème fraîche" },
+        { "groupId": 4, "amount": 1, "unit": "piece", "unitSymbol": "st", "ingredientName": "lime (saft och zest)" }
+      ],
+      "instructions": [
+        { "groupId": 1, "stepNumber": 1, "instruction": "Stek i smör eller olja. Fräs finhackad morot, lök, potatis och kummin." },
+        { "groupId": 2, "stepNumber": 2, "instruction": "Tillsätt kummin och tomatpuré. Fräs kort för att frigöra smak." },
+        { "groupId": 3, "stepNumber": 3, "instruction": "Lägg i tärnad kycklingbröst. Stek lätt tills ytan får färg." },
+        { "groupId": 3, "stepNumber": 4, "instruction": "Häll på kycklingfond och låt puttra tills kycklingen är genomstekt." },
+        { "groupId": 3, "stepNumber": 5, "instruction": "Häll på kycklingfond och låt puttra tills kycklingen är genomstekt." },
+        { "groupId": 4, "stepNumber": 6, "instruction": "Tillsätt crème fraîche och limesaft. Smaka av med salt och peppar." },
+        { "groupId": 4, "stepNumber": 7, "instruction": "Servera med ris eller naan." }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Marinerad halloumi med grönsakssallad och cashewnötter",
+      "serves": 4,
+      "ingredients": [
+        { "groupId": 1, "amount": 2, "unit": "tablespoons", "unitSymbol": "msk", "ingredientName": "ingefära" },
+        { "groupId": 1, "amount": 2, "unit": "cloves", "unitSymbol": "st", "ingredientName": "vitlök" },
+        { "groupId": 1, "amount": 0.5, "unit": "deciliters", "unitSymbol": "dl", "ingredientName": "sojasås" },
+        { "groupId": 1, "amount": 0.5, "unit": "deciliters", "unitSymbol": "dl", "ingredientName": "honung" },
+        { "groupId": 1, "amount": 0.5, "unit": "deciliters", "unitSymbol": "dl", "ingredientName": "ketchup" },
+        { "groupId": 1, "amount": 2, "unit": "tablespoons", "unitSymbol": "msk", "ingredientName": "vitvinsvinäger" },
+        { "groupId": 1, "amount": 2, "unit": "teaspoons", "unitSymbol": "tsk", "ingredientName": "sesamfrön" },
+
+        { "groupId": 2, "amount": 400, "unit": "grams", "unitSymbol": "g", "ingredientName": "halloumi" },
+
+        { "groupId": 3, "amount": 200, "unit": "grams", "unitSymbol": "g", "ingredientName": "spetskål" },
+        { "groupId": 3, "amount": 2, "unit": "pieces", "unitSymbol": "st", "ingredientName": "morot" },
+        { "groupId": 3, "amount": 1, "unit": "piece", "unitSymbol": "st", "ingredientName": "paprika" },
+        { "groupId": 3, "amount": 1, "unit": "piece", "unitSymbol": "st", "ingredientName": "salladslök" },
+        { "groupId": 3, "amount": null, "unit": null, "unitSymbol": null, "ingredientName": "salt" },
+
+        { "groupId": 4, "amount": 1, "unit": "bunch", "unitSymbol": "påse", "ingredientName": "koriander" },
+        { "groupId": 4, "amount": 1, "unit": "piece", "unitSymbol": "st", "ingredientName": "chili" },
+        { "groupId": 4, "amount": 2, "unit": "tablespoons", "unitSymbol": "msk", "ingredientName": "olivolja" },
+        { "groupId": 4, "amount": 1, "unit": "piece", "unitSymbol": "st", "ingredientName": "lime, juice" },
+        { "groupId": 4, "amount": null, "unit": null, "unitSymbol": null, "ingredientName": "salt, nypa" },
+
+        { "groupId": 5, "amount": 40, "unit": "grams", "unitSymbol": "g", "ingredientName": "cashewnötter" }
+      ],
+      "instructions": [
+        { "groupId": 1, "stepNumber": 1, "instruction": "Sätt ugnen på 200°C. Skala och finhacka ingefära och vitlök. Blanda med sojasås, honung, ketchup, vitvinsvinäger och sesamfrön till en marinad. Hetta upp en stekpanna på medelvärme och sjud marinaden tills den tjocknar något, ca 2–3 minuter. Stäng av värmen." },
+        { "groupId": 2, "stepNumber": 2, "instruction": "Skär halloumin i 1 cm tjocka stavar och lägg dem på en plåt med bakplåtspapper. Ringla över marinaden så att alla bitar täcks. Tillaga i ugnen 10–12 minuter." },
+        { "groupId": 3, "stepNumber": 3, "instruction": "Strimla spetskålen fint. Skala och skär morötterna i tändstickstunna stavar. Kärna ur och skär paprikan i 3 cm bitar. Grovhacka salladslöken. Blanda alla grönsaker i en stor skål och krydda med en nypa salt." },
+        { "groupId": 4, "stepNumber": 4, "instruction": "Finhacka koriander. Kärna ur och hacka chilin fint. Blanda koriander och chili i en skål med olivolja och pressad limejuice. Smaka av med en nypa salt." },
+        { "groupId": 5, "stepNumber": 5, "instruction": "Grovhacka cashewnötterna." },
+        { "groupId": 6, "stepNumber": 6, "instruction": "Fördela salladen mellan tallrikar och toppa med de marinerade halloumibitarna. Strö över cashewnötterna." }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Farmors bröd",
+      "serves": 9,
+      "ingredients": [
+        { "groupId": 1, "amount": 1.5, "unit": "packages", "unitSymbol": "pkt", "ingredientName": "packet gramhams mjöl" },
+        { "groupId": 1, "amount": null, "unit": null, "unitSymbol": null, "ingredientName": "siktat grahamsmjöl (efter konsistens på degen)" },
+        { "groupId": 1, "amount": 1.5, "unit": "tablespoons", "unitSymbol": "msk", "ingredientName": "salt" },
+        { "groupId": 1, "amount": "1½–2", "unit": "packages", "unitSymbol": "pkt", "ingredientName": "jäst" },
+        { "groupId": 1, "amount": 1.5, "unit": "liters", "unitSymbol": "l", "ingredientName": "vätska (1,1 l standardmjölk, 4 dl vatten eller 1,5 l mellanmjölk)" }
+      ],
+      "instructions": [
+        { "groupId": 1, "stepNumber": 1, "instruction": "Smula eller finfördela jästen i en stor bunke." },
+        { "groupId": 1, "stepNumber": 2, "instruction": "Blanda ut jästen med den ljumma vätskan." },
+        { "groupId": 1, "stepNumber": 3, "instruction": "Tillsätt mjölet i bunken lite åt gången tills degen inte är för hård men något klibbig i konsistensen. Degen ska vara lite klibbig men inte för hård." },
+        { "groupId": 1, "stepNumber": 4, "instruction": "Lägg lite mjöl på toppen och låt jäsa ca 30 minuter under bakduk." },
+        { "groupId": 2, "stepNumber": 5, "instruction": "Baka ut degen, knåda ej utan forma till en rulle. Skär sedan av en bit och klappa den med båda händerna. Upprepa tills du fått ca 9 bitar." },
+        { "groupId": 2, "stepNumber": 6, "instruction": "Ta en bit deg i taget och baka ut först och forma till en rund tunn kaka. Lägg kakan på mjölat bord och låt jäsa under tiden som du bakar ut de andra kakorna." },
+        { "groupId": 3, "stepNumber": 7, "instruction": "Nagga med en gaffel och grädda i 230–250°C i ca 7–10 minuter tills kakorna fått färg." },
+        { "groupId": 3, "stepNumber": 8, "instruction": "Borsta av kakorna med en visp eller ren diskborste när de är färdiga." }
+      ]
+    }
+
+
+
+
+
+
+
+
     ];
 
     // State
@@ -362,8 +590,8 @@
         const card = document.createElement('div');
         card.className = 'recipe-card';
         card.innerHTML = `
-          <h2>${recipe.header}</h2>
-          <p class="recipe-meta">${recipe.ingredients.length} ingredienser · ${recipe.instructions.length} steg</p>
+          <h2>${recipe.title}</h2>
+          <p class="recipe-meta">${recipe.ingredients.length} ingredients · ${recipe.instructions.length} steps</p>
         `;
         card.addEventListener('click', () => showRecipeDetail(recipe));
         recipeList.appendChild(card);
@@ -374,32 +602,85 @@
     function showRecipeDetail(recipe) {
       currentRecipe = recipe;
       
-      const ingredientsHtml = recipe.ingredients.map(ing => `
-        <div class="ingredient">
-          <span class="ingredient-amount">${ing.amount} ${ing.unitSymbol}</span>
-          <span>${ing.ingredientName}</span>
+      // Group ingredients by groupId and render with spacing between groups
+      const groups = [];
+      const groupIndexById = new Map();
+      recipe.ingredients.forEach((ing) => {
+        const id = ing.groupId ?? '__ungrouped__';
+        if (!groupIndexById.has(id)) {
+          groupIndexById.set(id, groups.length);
+          groups.push({ id, items: [] });
+        }
+        groups[groupIndexById.get(id)].items.push(ing);
+      });
+
+      const ingredientsHtml = groups.map(g => `
+        <div class="ingredient-group" data-group-id="${g.id}">
+          ${g.items.map(ing => `
+            <div class=\"ingredient\">
+              <span class=\"ingredient-amount\">${ing.amount ?? ''} ${ing.unitSymbol ?? ''}</span>
+              <span>${ing.ingredientName}</span>
+            </div>
+          `).join('')}
         </div>
       `).join('');
       
       const instructionsHtml = recipe.instructions.map(inst => `
-        <li class="instruction">
+        <li class="instruction" data-group-id="${inst.groupId ?? ''}">
           <span class="step-number"></span>
           <span class="instruction-text">${inst.instruction}</span>
         </li>
       `).join('');
       
       recipeDetail.innerHTML = `
-        <h1>${recipe.header}</h1>
+        <h1>${recipe.title}</h1>
         <div class="ingredients-section">
-          <h2 class="section-title">Ingredienser</h2>
+          <h2 class="section-title">Ingredients</h2>
           ${ingredientsHtml}
         </div>
         <div class="instructions-section">
-          <h2 class="section-title">Instruktioner</h2>
+          <h2 class="section-title">Instructions</h2>
           <ol>${instructionsHtml}</ol>
         </div>
       `;
-      
+
+      // Cross-highlighting between ingredient groups and instruction steps
+      let highlightedGroupId = null;
+      const ingredientGroupElsById = new Map(
+        Array.from(recipeDetail.querySelectorAll('.ingredient-group'))
+          .map(el => [el.getAttribute('data-group-id'), el])
+      );
+      const instructionEls = Array.from(recipeDetail.querySelectorAll('.instruction'));
+      const instructionElsByGroupId = new Map();
+      instructionEls.forEach(el => {
+        const gid = el.getAttribute('data-group-id');
+        if (!instructionElsByGroupId.has(gid)) instructionElsByGroupId.set(gid, []);
+        instructionElsByGroupId.get(gid).push(el);
+      });
+
+      function setHighlightedGroup(groupId) {
+        ingredientGroupElsById.forEach(el => el.classList.remove('highlighted'));
+        instructionEls.forEach(el => el.classList.remove('highlighted'));
+        highlightedGroupId = groupId;
+        if (!groupId) return;
+        const groupEl = ingredientGroupElsById.get(String(groupId));
+        if (groupEl) groupEl.classList.add('highlighted');
+        const steps = instructionElsByGroupId.get(String(groupId)) || [];
+        steps.forEach(el => el.classList.add('highlighted'));
+      }
+
+      ingredientGroupElsById.forEach((el, gid) => {
+        el.addEventListener('click', () => {
+          setHighlightedGroup(highlightedGroupId === gid ? null : gid);
+        });
+      });
+      instructionEls.forEach(el => {
+        el.addEventListener('click', () => {
+          const gid = el.getAttribute('data-group-id');
+          setHighlightedGroup(highlightedGroupId === gid ? null : gid);
+        });
+      });
+
       listView.classList.add('hidden');
       detailView.classList.add('active');
     }
@@ -414,7 +695,7 @@
     // Filter recipes
     function filterRecipes(query) {
       const filtered = recipes.filter(recipe =>
-        recipe.header.toLowerCase().includes(query.toLowerCase())
+        recipe.title.toLowerCase().includes(query.toLowerCase())
       );
       renderRecipeList(filtered);
     }
