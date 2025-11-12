@@ -103,6 +103,11 @@ async function build() {
     out = out.replace('%SCRIPT_PLACEHOLDER%', finalScript);
   }
 
+  // Replace build date placeholder
+  out = out.replace('%BUILDDATE_PLACEHOLDER%', new Date().toISOString());
+
+  
+
   await ensureDir(outDir);
   const outPath = path.join(outDir, 'index.html');
   await fs.writeFile(outPath, out, 'utf8');
