@@ -18,9 +18,36 @@ async function ensureDir(dir) {
   }
 }
 
+/**
+ * Read all JavaScript files from a directory
+ * @param {string} dirPath - Directory path to scan
+ * @returns {Promise<string>} Concatenated contents of all JS files
+ */
+async function readAllJSFiles(dirPath) {
+  try {
+    const files = await fs.readdir(dirPath);
+    const jsFiles = files.filter(f => f.endsWith('.js')).sort();
+    
+    const contents = await Promise.all(
+      jsFiles.map(f => readIfExists(path.join(dirPath, f)))
+    );
+    
+    return contents
+      .filter(c => c !== null)
+      .map((content, idx) => {
+        return `// ─────────────────────────────────────────────────────────────\n// Module: ${jsFiles[idx]}\n// ─────────────────────────────────────────────────────────────\n${content}`;
+      })
+      .join('\n\n');
+  } catch (err) {
+    if (err.code === 'ENOENT') return null;
+    throw err;
+  }
+}
+
 async function build() {
   const root = path.resolve(__dirname, '..');
   const srcDir = path.join(root, 'src');
+  const modulesDir = path.join(srcDir, 'modules');
   const outDir = path.join(root, 'docs');
 
   const indexPath = path.join(srcDir, 'index.html');
@@ -28,11 +55,12 @@ async function build() {
   const dataPath = path.join(srcDir, 'data.json');
   const scriptPath = path.join(srcDir, 'script.js');
 
-  const [indexHtml, styleCss, dataJson, scriptJs] = await Promise.all([
+  const [indexHtml, styleCss, dataJson, scriptJs, modulesJs] = await Promise.all([
     readIfExists(indexPath),
     readIfExists(stylePath),
     readIfExists(dataPath),
     readIfExists(scriptPath),
+    readAllJSFiles(modulesDir),
   ]);
 
   if (!indexHtml) {
@@ -51,17 +79,28 @@ async function build() {
 
   // Replace data placeholder. Keep JSON as-is (not escaped) so it becomes JS value in <script>
   if (dataJson !== null) {
-    // Ensure JSON is on one line (but keep readable) — preserve formatting
     out = out.replace('%RECIPE_DATA_PLACEHOLDER%', dataJson);
   } else {
     console.warn('Warning: src/data.json not found — leaving %RECIPE_DATA_PLACEHOLDER% as-is');
   }
 
-  // Replace script placeholder
+  // Combine modules and main script
+  let finalScript = '';
+  if (modulesJs !== null) {
+    finalScript += modulesJs + '\n\n';
+  } else {
+    console.warn('Warning: No modules found in src/modules/ — skipping');
+  }
+  
   if (scriptJs !== null) {
-    out = out.replace('%SCRIPT_PLACEHOLDER%', scriptJs);
+    finalScript += scriptJs;
   } else {
     console.warn('Warning: src/script.js not found — leaving %SCRIPT_PLACEHOLDER% as-is');
+  }
+
+  // Replace script placeholder
+  if (finalScript) {
+    out = out.replace('%SCRIPT_PLACEHOLDER%', finalScript);
   }
 
   await ensureDir(outDir);
