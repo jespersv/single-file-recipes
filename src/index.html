@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+  <meta charset="utf-8" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="theme-color" content="#ffcebf" />
+  <meta name="msapplication-navbutton-color" content="#ffcebf" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>Recept</title>
+  <meta name="description" content="En enkel receptsamling.">
+
+  <style>
+    %STYLE_PLACEHOLDER%
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- List View -->
+    <div id="list-view" class="list-view">
+      <header>
+        <h1>Recipes</h1>
+        <div class="search-container">
+          <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+          <input type="text" id="search" placeholder="Sök recept...">
+        </div>
+      </header>
+      <div id="recipe-list"></div>
+      <div id="no-results" class="no-results" style="display: none;">
+        No recipes found
+      </div>
+    </div>
+
+    <!-- Detail View -->
+    <div id="detail-view" class="detail-view">
+      <button class="back-button" id="back-button">
+        <svg class="arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+        </svg>
+        Back
+      </button>
+      <div class="recipe-detail-card" id="recipe-detail"></div>
+    </div>
+  </div>
+
+  <script>
+    // Recipe data
+    const recipes = [];
+    recipes = %RECIPE_DATA_PLACEHOLDER%;
+
+    %SCRIPT_PLACEHOLDER%
+  </script>
+</body>
+</html>
