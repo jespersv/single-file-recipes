@@ -1,0 +1,27 @@
+{
+    "id": 4,
+    "title": "Julköttbullar",
+    "serves": 50,
+    "ingredients": [
+    { "groupId": 1, "amount": 500, "unit": "grams", "unitSymbol": "g", "ingredientName": "nötfärs" },
+    { "groupId": 1, "amount": 2, "unit": "pinches", "unitSymbol": "krm", "ingredientName": "kryddpeppar" },
+    { "groupId": 1, "amount": 1, "unit": "piece", "unitSymbol": "st", "ingredientName": "kryddnejlika" },
+    { "groupId": 1, "amount": 2, "unit": "pinches", "unitSymbol": "krm", "ingredientName": "svartpeppar" },
+    { "groupId": 3, "amount": 1, "unit": "piece", "unitSymbol": "st", "ingredientName": "gul lök" },
+    { "groupId": 3, "amount": 1, "unit": "tablespoon", "unitSymbol": "msk", "ingredientName": "smör" },
+    { "groupId": 4, "amount": 0.5, "unit": "deciliter", "unitSymbol": "dl", "ingredientName": "ströbröd" },
+    { "groupId": 4, "amount": 0.5, "unit": "deciliter", "unitSymbol": "dl", "ingredientName": "mjölk" },
+    { "groupId": 4, "amount": 1, "unit": "piece", "unitSymbol": "st", "ingredientName": "ägg" },
+    { "groupId": 4, "amount": 2, "unit": "tablespoons", "unitSymbol": "msk", "ingredientName": "kalvfond" },
+    { "groupId": 5, "amount": 2, "unit": "deciliters", "unitSymbol": "dl", "ingredientName": "västerbottensost, riven" }
+    ],
+    "instructions": [
+    { "groupId": 0, "stepNumber": 1, "instruction": "Förvärm ugnen till 250°C (över- och undervärme)." },
+    { "groupId": 4, "stepNumber": 2, "instruction": "Blanda ägg, mjölk, ströbröd och kalvfond. Låt svälla i 5 minuter." },
+    { "groupId": 3, "stepNumber": 3, "instruction": "Finhacka och fräs löken i smör tills mjuk." },
+    { "groupId": 1, "stepNumber": 4, "instruction": "Blanda färs med kryddnejlika, kryddpeppar och svartpeppar." },
+    { "groupId": 5, "stepNumber": 5, "instruction": "Tillsätt rivnen västerbottensosten och rör ihop allt till en smet." },
+    { "groupId": 0, "stepNumber": 6, "instruction": "Rulla köttbullar med fuktiga händer och lägg på en oljad plåt." },
+    { "groupId": 0, "stepNumber": 7, "instruction": "Stek i ugn 8–12 minuter vid 250°C, vänd efter cirka 7 minuter." }
+    ]
+}

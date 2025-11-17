@@ -1,0 +1,27 @@
+{
+    "id": 7,
+    "title": "Indisk kyckling (Tikka masala tomat)",
+    "serves": 4,
+    "ingredients": [
+    { "groupId": 1, "amount": 2, "unit": "tablespoons", "unitSymbol": "msk", "ingredientName": "smör" },
+    { "groupId": 1, "amount": 1, "unit": "piece", "unitSymbol": "st", "ingredientName": "gul lök" },
+    { "groupId": 1, "amount": 1, "unit": "piece", "unitSymbol": "st", "ingredientName": "potatis" },
+    { "groupId": 1, "amount": 2, "unit": "piece", "unitSymbol": "st", "ingredientName": "morot" },
+    { "groupId": 2, "amount": 2, "unit": "teaspoons", "unitSymbol": "tsk", "ingredientName": "kummin, stött" },
+    { "groupId": 2, "amount": 2, "unit": "tablespoons", "unitSymbol": "msk", "ingredientName": "tomatpuré" },
+    { "groupId": 3, "amount": 5, "unit": "deciliters", "unitSymbol": "dl", "ingredientName": "kycklingfond" },
+    { "groupId": 3, "amount": 2, "unit": "pieces", "unitSymbol": "st", "ingredientName": "kycklingbröst" },
+    { "groupId": 3, "amount": null, "unit": null, "unitSymbol": null, "ingredientName": "salt och peppar" },
+    { "groupId": 4, "amount": 2, "unit": "deciliters", "unitSymbol": "dl", "ingredientName": "crème fraîche" },
+    { "groupId": 4, "amount": 1, "unit": "piece", "unitSymbol": "st", "ingredientName": "lime (saft och zest)" }
+    ],
+    "instructions": [
+    { "groupId": 1, "stepNumber": 1, "instruction": "Stek i smör eller olja. Fräs finhackad morot, lök, potatis och kummin." },
+    { "groupId": 2, "stepNumber": 2, "instruction": "Tillsätt kummin och tomatpuré. Fräs kort för att frigöra smak." },
+    { "groupId": 3, "stepNumber": 3, "instruction": "Lägg i tärnad kycklingbröst. Stek lätt tills ytan får färg." },
+    { "groupId": 3, "stepNumber": 4, "instruction": "Häll på kycklingfond och låt puttra tills kycklingen är genomstekt." },
+    { "groupId": 3, "stepNumber": 5, "instruction": "Häll på kycklingfond och låt puttra tills kycklingen är genomstekt." },
+    { "groupId": 4, "stepNumber": 6, "instruction": "Tillsätt crème fraîche och limesaft. Smaka av med salt och peppar." },
+    { "groupId": 4, "stepNumber": 7, "instruction": "Servera med ris eller naan." }
+    ]
+}

@@ -1,0 +1,36 @@
+{
+    "id": 1,
+    "title": "Indisk gryta",
+    "serves": 4,
+    "ingredients": [
+        { "groupId": 1, "amount": 100, "unit": "grams", "unitSymbol": "g", "ingredientName": "smör" },
+        { "groupId": 1, "amount": 1, "unit": "tablespoon", "unitSymbol": "msk", "ingredientName": "olja" },
+        { "groupId": 1, "amount": 2, "unit": "cloves", "unitSymbol": "st", "ingredientName": "vitlök" },
+        { "groupId": 1, "amount": 1, "unit": "piece", "unitSymbol": "st", "ingredientName": "rödlök" },
+        { "groupId": 1, "amount": 2, "unit": "teaspoon", "unitSymbol": "tsk", "ingredientName": "ingefära" },
+        { "groupId": 2, "amount": 1, "unit": "tablespoon", "unitSymbol": "msk", "ingredientName": "tomatpuré" },
+        { "groupId": 2, "amount": null, "unit": null, "unitSymbol": null, "ingredientName": "koriander, pulver" },
+        { "groupId": 2, "amount": null, "unit": null, "unitSymbol": null, "ingredientName": "korianderfrön" },
+        { "groupId": 2, "amount": null, "unit": null, "unitSymbol": null, "ingredientName": "chili" },
+        { "groupId": 2, "amount": null, "unit": null, "unitSymbol": null, "ingredientName": "socker" },
+        { "groupId": 2, "amount": null, "unit": null, "unitSymbol": null, "ingredientName": "salt" },
+        { "groupId": 2, "amount": null, "unit": null, "unitSymbol": null, "ingredientName": "peppar" },
+        { "groupId": 2, "amount": null, "unit": null, "unitSymbol": null, "ingredientName": "curry" },
+        { "groupId": 2, "amount": null, "unit": null, "unitSymbol": null, "ingredientName": "kummin" },
+        { "groupId": 3, "amount": 1, "unit": "piece", "unitSymbol": "st", "ingredientName": "tomat" },
+        { "groupId": 3, "amount": 1, "unit": "piece", "unitSymbol": "st", "ingredientName": "paprika" },
+        { "groupId": 4, "amount": 400, "unit": "g", "unitSymbol": "g", "ingredientName": "krossad tomat" },
+        { "groupId": 5, "amount": 2, "unit": "dl", "unitSymbol": "dl", "ingredientName": "röda linser" },
+        { "groupId": 6, "amount": 2, "unit": "piece", "unitSymbol": "st", "ingredientName": "kyckling" },
+        { "groupId": 7, "amount": 2, "unit": "dl", "unitSymbol": "dl", "ingredientName": "yoghurt" }
+    ],
+    "instructions": [
+        { "groupId": 1, "stepNumber": 1, "instruction": "Hack och fräs lök, vitlök, ingefära i smör." },
+        { "groupId": 2, "stepNumber": 2, "instruction": "Tillsätt kryddor och tomatpuré." },
+        { "groupId": 3, "stepNumber": 3, "instruction": "Hack och fräs snabbt till tomat och paprika." },
+        { "groupId": 4, "stepNumber": 4, "instruction": "Häll i krossad tomat och vatten." },
+        { "groupId": 5, "stepNumber": 5, "instruction": "Tillsätt linser." },
+        { "groupId": 6, "stepNumber": 6, "instruction": "Tärna och lägg i kycklingen." },
+        { "groupId": 7, "stepNumber": 7, "instruction": "Tillsätt yoghurt och låt koka in.." }
+    ]
+}

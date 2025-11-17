@@ -1,0 +1,22 @@
+{
+    "id": 9,
+    "title": "Farmors bröd",
+    "serves": 9,
+    "ingredients": [
+    { "groupId": 1, "amount": 1.5, "unit": "packages", "unitSymbol": "pkt", "ingredientName": "packet gramhams mjöl" },
+    { "groupId": 1, "amount": null, "unit": null, "unitSymbol": null, "ingredientName": "siktat grahamsmjöl (efter konsistens på degen)" },
+    { "groupId": 1, "amount": 1.5, "unit": "tablespoons", "unitSymbol": "msk", "ingredientName": "salt" },
+    { "groupId": 1, "amount": "1½–2", "unit": "packages", "unitSymbol": "pkt", "ingredientName": "jäst" },
+    { "groupId": 1, "amount": 1.5, "unit": "liters", "unitSymbol": "l", "ingredientName": "vätska (1,1 l standardmjölk, 4 dl vatten eller 1,5 l mellanmjölk)" }
+    ],
+    "instructions": [
+    { "groupId": 1, "stepNumber": 1, "instruction": "Smula eller finfördela jästen i en stor bunke." },
+    { "groupId": 1, "stepNumber": 2, "instruction": "Blanda ut jästen med den ljumma vätskan." },
+    { "groupId": 1, "stepNumber": 3, "instruction": "Tillsätt mjölet i bunken lite åt gången tills degen inte är för hård men något klibbig i konsistensen. Degen ska vara lite klibbig men inte för hård." },
+    { "groupId": 1, "stepNumber": 4, "instruction": "Lägg lite mjöl på toppen och låt jäsa ca 30 minuter under bakduk." },
+    { "groupId": 2, "stepNumber": 5, "instruction": "Baka ut degen, knåda ej utan forma till en rulle. Skär sedan av en bit och klappa den med båda händerna. Upprepa tills du fått ca 9 bitar." },
+    { "groupId": 2, "stepNumber": 6, "instruction": "Ta en bit deg i taget och baka ut först och forma till en rund tunn kaka. Lägg kakan på mjölat bord och låt jäsa under tiden som du bakar ut de andra kakorna." },
+    { "groupId": 3, "stepNumber": 7, "instruction": "Nagga med en gaffel och grädda i 230–250°C i ca 7–10 minuter tills kakorna fått färg." },
+    { "groupId": 3, "stepNumber": 8, "instruction": "Borsta av kakorna med en visp eller ren diskborste när de är färdiga." }
+    ]
+}

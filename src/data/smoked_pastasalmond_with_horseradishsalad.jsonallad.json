@@ -1,0 +1,24 @@
+{
+    "id": 5,
+    "title": "Kallrökt laxpasta med pepparrot och fänkålssallad",
+    "serves": 4,
+    "ingredients": [
+    { "groupId": 1, "amount": 4, "unit": "portions", "unitSymbol": "port", "ingredientName": "pasta, t.ex. tagliatelle" },
+    { "groupId": 2, "amount": 125, "unit": "grams", "unitSymbol": "g", "ingredientName": "färskost med pepparrot" },
+    { "groupId": 2, "amount": 2, "unit": "deciliters", "unitSymbol": "dl", "ingredientName": "mjölk" },
+    { "groupId": 2, "amount": 400, "unit": "grams", "unitSymbol": "g", "ingredientName": "kallrökt lax" },
+    { "groupId": 3, "amount": 1, "unit": "half", "unitSymbol": "st", "ingredientName": "apelsin (saft och skal)" },
+    { "groupId": 3, "amount": 1, "unit": "tablespoon", "unitSymbol": "msk", "ingredientName": "olivolja" },
+    { "groupId": 3, "amount": null, "unit": null, "unitSymbol": null, "ingredientName": "salt och peppar" },
+    { "groupId": 4, "amount": 2, "unit": "fennel bulbs", "unitSymbol": "st", "ingredientName": "fänkål" },
+    { "groupId": 4, "amount": 2, "unit": "carrots", "unitSymbol": "st", "ingredientName": "morötter" }
+    ],
+    "instructions": [
+    { "groupId": 1, "stepNumber": 1, "instruction": "Sätt på en kastrull med vatten till pastan." },
+    { "groupId": 4, "stepNumber": 2, "instruction": "Fänkålssallad: Ansa och strimla fänkålen tunt. Skala morötterna och breda morotssnudlar med en potatisskalare." },
+    { "groupId": 3, "stepNumber": 3, "instruction": "Riv apelsinskalet och pressa saften. Blanda det med olivolja i en skål där grönsakerna får plats. Smaka av med salt och peppar." },
+    { "groupId": 1, "stepNumber": 4, "instruction": "Pasta: Koka pastan enligt anvisningarna på förpackningen. Låt den rinna av i ett durkslag. Värm färskosten och mjölken i pastakastrullen, krydda med salt och peppar, och vänd ner pastan." },
+    { "groupId": 4, "stepNumber": 5, "instruction": "Fänkålssallad: Låt fänkål och morotssnudlar rinna av ordentligt och vänd ner dem i dressingen." },
+    { "groupId": 2, "stepNumber": 6, "instruction": "Servera den varma pastan med kallrökt lax och fänkålssallad." }
+    ]
+}

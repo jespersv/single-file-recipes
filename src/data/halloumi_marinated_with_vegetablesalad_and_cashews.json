@@ -1,0 +1,38 @@
+{
+    "id": 8,
+    "title": "Marinerad halloumi med grönsakssallad och cashewnötter",
+    "serves": 4,
+    "ingredients": [
+    { "groupId": 1, "amount": 2, "unit": "tablespoons", "unitSymbol": "msk", "ingredientName": "ingefära" },
+    { "groupId": 1, "amount": 2, "unit": "cloves", "unitSymbol": "st", "ingredientName": "vitlök" },
+    { "groupId": 1, "amount": 0.5, "unit": "deciliters", "unitSymbol": "dl", "ingredientName": "sojasås" },
+    { "groupId": 1, "amount": 0.5, "unit": "deciliters", "unitSymbol": "dl", "ingredientName": "honung" },
+    { "groupId": 1, "amount": 0.5, "unit": "deciliters", "unitSymbol": "dl", "ingredientName": "ketchup" },
+    { "groupId": 1, "amount": 2, "unit": "tablespoons", "unitSymbol": "msk", "ingredientName": "vitvinsvinäger" },
+    { "groupId": 1, "amount": 2, "unit": "teaspoons", "unitSymbol": "tsk", "ingredientName": "sesamfrön" },
+
+    { "groupId": 2, "amount": 400, "unit": "grams", "unitSymbol": "g", "ingredientName": "halloumi" },
+
+    { "groupId": 3, "amount": 200, "unit": "grams", "unitSymbol": "g", "ingredientName": "spetskål" },
+    { "groupId": 3, "amount": 2, "unit": "pieces", "unitSymbol": "st", "ingredientName": "morot" },
+    { "groupId": 3, "amount": 1, "unit": "piece", "unitSymbol": "st", "ingredientName": "paprika" },
+    { "groupId": 3, "amount": 1, "unit": "piece", "unitSymbol": "st", "ingredientName": "salladslök" },
+    { "groupId": 3, "amount": null, "unit": null, "unitSymbol": null, "ingredientName": "salt" },
+
+    { "groupId": 4, "amount": 1, "unit": "bunch", "unitSymbol": "påse", "ingredientName": "koriander" },
+    { "groupId": 4, "amount": 1, "unit": "piece", "unitSymbol": "st", "ingredientName": "chili" },
+    { "groupId": 4, "amount": 2, "unit": "tablespoons", "unitSymbol": "msk", "ingredientName": "olivolja" },
+    { "groupId": 4, "amount": 1, "unit": "piece", "unitSymbol": "st", "ingredientName": "lime, juice" },
+    { "groupId": 4, "amount": null, "unit": null, "unitSymbol": null, "ingredientName": "salt, nypa" },
+
+    { "groupId": 5, "amount": 40, "unit": "grams", "unitSymbol": "g", "ingredientName": "cashewnötter" }
+    ],
+    "instructions": [
+    { "groupId": 1, "stepNumber": 1, "instruction": "Sätt ugnen på 200°C. Skala och finhacka ingefära och vitlök. Blanda med sojasås, honung, ketchup, vitvinsvinäger och sesamfrön till en marinad. Hetta upp en stekpanna på medelvärme och sjud marinaden tills den tjocknar något, ca 2–3 minuter. Stäng av värmen." },
+    { "groupId": 2, "stepNumber": 2, "instruction": "Skär halloumin i 1 cm tjocka stavar och lägg dem på en plåt med bakplåtspapper. Ringla över marinaden så att alla bitar täcks. Tillaga i ugnen 10–12 minuter." },
+    { "groupId": 3, "stepNumber": 3, "instruction": "Strimla spetskålen fint. Skala och skär morötterna i tändstickstunna stavar. Kärna ur och skär paprikan i 3 cm bitar. Grovhacka salladslöken. Blanda alla grönsaker i en stor skål och krydda med en nypa salt." },
+    { "groupId": 4, "stepNumber": 4, "instruction": "Finhacka koriander. Kärna ur och hacka chilin fint. Blanda koriander och chili i en skål med olivolja och pressad limejuice. Smaka av med en nypa salt." },
+    { "groupId": 5, "stepNumber": 5, "instruction": "Grovhacka cashewnötterna." },
+    { "groupId": 6, "stepNumber": 6, "instruction": "Fördela salladen mellan tallrikar och toppa med de marinerade halloumibitarna. Strö över cashewnötterna." }
+    ]
+}

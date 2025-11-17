@@ -1,0 +1,37 @@
+{
+    "id": 3,
+    "title": "BBQ Beans",
+    "serves": 4,
+    "ingredients": [
+    { "groupId": 1, "amount": 400, "unit": "grams", "unitSymbol": "g", "ingredientName": "mix bönor" },
+    { "groupId": 1, "amount": 1, "unit": "slice", "unitSymbol": "st", "ingredientName": "baccon, skivad" },
+    { "groupId": 2, "amount": 1, "unit": "piece", "unitSymbol": "st", "ingredientName": "gul lök" },
+    { "groupId": 2, "amount": 2, "unit": "tablespoons", "unitSymbol": "msk", "ingredientName": "grön paprika" },
+    { "groupId": 2, "amount": 1, "unit": "tablespoon", "unitSymbol": "msk", "ingredientName": "jalapeño" },
+    { "groupId": 2, "amount": 1, "unit": "clove", "unitSymbol": "st", "ingredientName": "vitlök" },
+    { "groupId": 3, "amount": 2.5, "unit": "deciliters", "unitSymbol": "dl", "ingredientName": "ketchup" },
+    { "groupId": 3, "amount": 2, "unit": "tablespoons", "unitSymbol": "msk", "ingredientName": "tomatpure" },
+    { "groupId": 3, "amount": "1–2", "unit": "deciliters", "unitSymbol": "dl", "ingredientName": "bruntsocker" },
+    { "groupId": 3, "amount": 1.5, "unit": "deciliters", "unitSymbol": "dl", "ingredientName": "äppeljuice" },
+    { "groupId": 3, "amount": 0.5, "unit": "deciliter", "unitSymbol": "dl", "ingredientName": "honung" },
+    { "groupId": 3, "amount": 2, "unit": "tablespoons", "unitSymbol": "msk", "ingredientName": "mörksirap" },
+    { "groupId": 3, "amount": 1, "unit": "tablespoon", "unitSymbol": "msk", "ingredientName": "äppel cider vinäger" },
+    { "groupId": 3, "amount": 1, "unit": "tablespoon", "unitSymbol": "msk", "ingredientName": "bbq rub" },
+    { "groupId": 3, "amount": 1, "unit": "tablespoon", "unitSymbol": "msk", "ingredientName": "gul senap" },
+    { "groupId": 3, "amount": 1, "unit": "tablespoon", "unitSymbol": "msk", "ingredientName": "hot sauce" },
+    { "groupId": 3, "amount": "1–2", "unit": "drops", "unitSymbol": "droppar", "ingredientName": "liquid smoke" },
+
+    { "groupId": 4, "amount": null, "unit": null, "unitSymbol": null, "ingredientName": "salt" },
+    { "groupId": 4, "amount": null, "unit": null, "unitSymbol": null, "ingredientName": "svart pepper" }
+    ],
+    "instructions": [
+    { "groupId": 0, "stepNumber": 1, "instruction": "Förvarm ugnen till 150°C." },
+    { "groupId": 1, "stepNumber": 2, "instruction": "Hack och stek baccon tills knaprig. Lyft ur pannan men spara fetet." },
+    { "groupId": 2, "stepNumber": 3, "instruction": "Lägg i finhackade löken och stek till brun runt kanterna, ca 7m." },
+    { "groupId": 2, "stepNumber": 4, "instruction": "Lägg i finhackad grön paprika, jalapeño, och vitlök. Stek ca 1m, tills mjuknat." },
+    { "groupId": 3, "stepNumber": 5, "instruction": "Tillsätt ketchup, brunsocker, äppeljuice, honung, sirap,vinäger, BBQ rub, senap, hot sauce, liquid smoke, och den steka baconen. Få det att börja putra." },
+    { "groupId": 1, "stepNumber": 6, "instruction": "Vänd ner avrunna bönorna och blanda." },
+    { "groupId": 4, "stepNumber": 7, "instruction": "Sätt in pannan i ugnen i ca 50m. Låt därefter vila ca 15m innan servering." },
+    { "groupId": 3, "stepNumber": 8, "instruction": "Smaka av med salt och peppar innan servering." }
+    ]
+}

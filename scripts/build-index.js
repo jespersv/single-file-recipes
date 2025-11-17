@@ -52,16 +52,32 @@ async function build() {
 
   const indexPath = path.join(srcDir, 'index.html');
   const stylePath = path.join(srcDir, 'styling.css');
-  const dataPath = path.join(srcDir, 'data.json');
+  const dataDir = path.join(srcDir, 'data');
   const scriptPath = path.join(srcDir, 'script.js');
 
-  const [indexHtml, styleCss, dataJson, scriptJs, modulesJs] = await Promise.all([
+  const [indexHtml, styleCss, scriptJs, modulesJs] = await Promise.all([
     readIfExists(indexPath),
     readIfExists(stylePath),
-    readIfExists(dataPath),
     readIfExists(scriptPath),
     readAllJSFiles(modulesDir),
   ]);
+
+  // Aggregate all recipe JSON files in src/data/
+  let recipesArray = null;
+  try {
+    const recipeFiles = await fs.readdir(dataDir);
+    const jsonFiles = recipeFiles.filter(f => f.endsWith('.json')).sort();
+    const recipeContents = await Promise.all(
+      jsonFiles.map(f => fs.readFile(path.join(dataDir, f), 'utf8'))
+    );
+    recipesArray = '[' + recipeContents.join(',\n') + ']';
+  } catch (err) {
+    if (err.code === 'ENOENT') {
+      console.warn('Warning: src/data/ not found — leaving %RECIPE_DATA_PLACEHOLDER% as-is');
+    } else {
+      throw err;
+    }
+  }
 
   if (!indexHtml) {
     console.error('Error: src/index.html not found');
@@ -78,10 +94,10 @@ async function build() {
   }
 
   // Replace data placeholder. Keep JSON as-is (not escaped) so it becomes JS value in <script>
-  if (dataJson !== null) {
-    out = out.replace('%RECIPE_DATA_PLACEHOLDER%', dataJson);
+  if (recipesArray !== null) {
+    out = out.replace('%RECIPE_DATA_PLACEHOLDER%', recipesArray);
   } else {
-    console.warn('Warning: src/data.json not found — leaving %RECIPE_DATA_PLACEHOLDER% as-is');
+    console.warn('Warning: No recipe data found in src/data/ — leaving %RECIPE_DATA_PLACEHOLDER% as-is');
   }
 
   // Combine modules and main script
