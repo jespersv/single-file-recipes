@@ -1,0 +1,20 @@
+{
+  "id_name": "chapati",
+  "id": 10,
+  "title": "Chapati",
+  "serves": 10,
+  "ingredients": [
+    { "groupId": 1, "amount": 5, "unit": "deciliters", "unitSymbol": "dl", "ingredientName": "vetemjöl (5 dl motsvarar ca 320 g)" },
+    { "groupId": 1, "amount": 1, "unit": "teaspoon", "unitSymbol": "tsk", "ingredientName": "salt" },
+    { "groupId": 1, "amount": 2, "unit": "teaspoons", "unitSymbol": "tsk", "ingredientName": "olja" },
+    { "groupId": 1, "amount": 2, "unit": "deciliters", "unitSymbol": "dl", "ingredientName": "ljummet vatten (ca 2 dl, efter behov)" },
+    { "groupId": 2, "amount": null, "unit": null, "unitSymbol": null, "ingredientName": "olja till stekning" }
+  ],
+  "instructions": [
+    { "groupId": 1, "stepNumber": 1, "instruction": "Blanda alla ingredienser till en smidig deg." },
+    { "groupId": 1, "stepNumber": 2, "instruction": "Dela degen i 10 delar (för 10 bröd), färre om du vill ha större bröd." },
+    { "groupId": 2, "stepNumber": 3, "instruction": "Kavla ut till tunna runda bröd på mjölad bänk." },
+    { "groupId": 2, "stepNumber": 4, "instruction": "Stek bröden 1–2 minuter per sida i en het, lätt oljad stekpanna. Bröden ska få fina bruna fläckar på båda sidor." }
+  ],
+  "notes": "Ger ca 10 bröd. Recept från ICA Buffé nr 3, 2009. Servera gärna nygräddade till indiska rätter. Stek snabbt på hög värme för bästa resultat."
+}

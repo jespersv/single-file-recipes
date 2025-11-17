@@ -1,0 +1,20 @@
+{
+  "id_name": "toffee_with_chocolate_topping_and_seasalt_flakes",
+  "id": 1,
+  "title": "Knäck med chokladtäcke & flingsalt",
+  "serves": 45,
+  "ingredients": [
+    { "groupId": 1, "amount": 1, "unit": "dl", "unitSymbol": "dl", "ingredientName": "vispgrädde" },
+    { "groupId": 1, "amount": 1, "unit": "dl", "unitSymbol": "dl", "ingredientName": "ljus sirap" },
+    { "groupId": 1, "amount": 1, "unit": "dl", "unitSymbol": "dl", "ingredientName": "strösocker" },
+    { "groupId": 1, "amount": 1, "unit": "dl", "unitSymbol": "dl", "ingredientName": "sötmandel, hackad" },
+    { "groupId": 2, "amount": 150, "unit": "grams", "unitSymbol": "g", "ingredientName": "mörk choklad" },
+    { "groupId": 3, "amount": null, "unit": null, "unitSymbol": null, "ingredientName": "flingsalt" }
+  ],
+  "instructions": [
+    { "groupId": 1, "stepNumber": 1, "instruction": "Ställ ut knäckformar på en bricka eller plåt. Koka upp grädde, sirap och socker i en kastrull. Låt sjuda på medelhög värme till 125 grader. Ta bort eventuellt socker på kastrullsidorna med en blöt pensel. Ta kastrullen från värmen och blanda ner mandeln." },
+    { "groupId": 1, "stepNumber": 2, "instruction": "Häll knäcksmeten i formarna till cirka 3/4. Låt stelna." },
+    { "groupId": 2, "stepNumber": 3, "instruction": "Hacka chokladen och smält den i en skål över sjudande vattenbad. Toppa knäcken med choklad." },
+    { "groupId": 3, "stepNumber": 4, "instruction": "Strö över flingsalt och låt stelna." }
+  ]
+}
