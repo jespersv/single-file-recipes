@@ -54,7 +54,7 @@ function showRecipeList() {
  */
 function handleSearch(query) {
   const filtered = filterRecipes(recipes, query);
-  renderRecipeList(recipeList, filtered, (r) => router.navigate('/recipe/' + r.id), noResults);
+  renderRecipeList(recipeList, filtered, (r) => router.navigate('/recipe/' + r.id_name), noResults);
 }
 
 // ============================================================================
@@ -77,7 +77,7 @@ if (typeof createRouter === 'function') {
     { pattern: '/', handler: () => { showRecipeList(); } },
     { pattern: '/recipe/:id', handler: ({ id }) => {
       // find recipe by id (number or string)
-      const found = recipes.find(r => String(r.id) === String(id));
+      const found = recipes.find(r => String(r.id_name) === String(id));
       if (found) {
         // render via router-driven flow
         showRecipeDetail(found);
@@ -87,7 +87,7 @@ if (typeof createRouter === 'function') {
     } }
   ]);
   // initial render of list with router-aware navigation
-  renderRecipeList(recipeList, recipes, (r) => router.navigate('/recipe/' + r.id), noResults);
+  renderRecipeList(recipeList, recipes, (r) => router.navigate('/recipe/' + r.id_name), noResults);
   router.start();
 } else {
   // fallback if router isn't present: render and use direct handlers
