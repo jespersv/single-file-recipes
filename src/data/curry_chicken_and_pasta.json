@@ -1,32 +1,33 @@
 {
-      "id": 2,
-      "title": "Curry- & kycklingsås och pasta",
-      "serves": 5,
-      "ingredients": [
-        { "groupId": 1, "amount": 500, "unit": "grams", "unitSymbol": "g", "ingredientName": "pasta" },
-        { "groupId": 2, "amount": null, "unit": null, "unitSymbol": null, "ingredientName": "smör" },
-        { "groupId": 2, "amount": 1, "unit": "piece", "unitSymbol": "st", "ingredientName": "lök" },
-        { "groupId": 2, "amount": 1, "unit": "clove", "unitSymbol": "st", "ingredientName": "vitlök" },
-        { "groupId": 3, "amount": 500, "unit": "grams", "unitSymbol": "g", "ingredientName": "kycklingfilé" },
-        { "groupId": 3, "amount": 1.5, "unit": "tablespoons", "unitSymbol": "msk", "ingredientName": "kycklingfond" },
-        { "groupId": 4, "amount": 4, "unit": "deciliters", "unitSymbol": "dl", "ingredientName": "crème fraiche" },
-        { "groupId": 4, "amount": 1, "unit": "deciliter", "unitSymbol": "dl", "ingredientName": "grädde" },
-        { "groupId": 5, "amount": 1, "unit": "tablespoon", "unitSymbol": "msk", "ingredientName": "curry" },
-        { "groupId": 5, "amount": 1, "unit": "tablespoon", "unitSymbol": "msk", "ingredientName": "paprika" },
-        { "groupId": 5, "amount": null, "unit": null, "unitSymbol": null, "ingredientName": "salt" },
-        { "groupId": 5, "amount": null, "unit": null, "unitSymbol": null, "ingredientName": "peppar" },
-        { "groupId": 5, "amount": null, "unit": null, "unitSymbol": null, "ingredientName": "Sriracha" },
-        { "groupId": 6, "amount": null, "unit": null, "unitSymbol": null, "ingredientName": "majsmjöl" },
-        { "groupId": 6, "amount": null, "unit": null, "unitSymbol": null, "ingredientName": "vatten" }
-      ],
-      "instructions": [
-        { "groupId": 1, "stepNumber": 1, "instruction": "Koka pastan enligt ansviningar." },
-        { "groupId": 3, "stepNumber": 2, "instruction": "Grovhacka lök och vitlök, stek mjukt i smör." },
-        { "groupId": 5, "stepNumber": 3, "instruction": "Tillsätt kryddor och stek i en minut." },
-        { "groupId": 2, "stepNumber": 4, "instruction": "Skär kycklingen i lagom stora bitar och lägg i pannan." },
-        { "groupId": 2, "stepNumber": 5, "instruction": "Stek tills kycklingen är färdig och häll på kycklingfonden." },
-        { "groupId": 4, "stepNumber": 6, "instruction": "Låt koka lätt och tillsätt grädde samt crème fraiche." },
-        { "groupId": 5, "stepNumber": 7, "instruction": "Smaka av med salt, peppar och Sriracha." },
-        { "groupId": 6, "stepNumber": 8, "instruction": "Om såsen blir för lös, toppred av med majsmjöl utrört i lite vatten." }
-      ]
-    }
+  "id_name": "curry_chicken_and_pasta",
+  "id": 2,
+  "title": "Curry- & kycklingsås och pasta",
+  "serves": 5,
+  "ingredients": [
+    { "groupId": 1, "amount": 500, "unit": "grams", "unitSymbol": "g", "ingredientName": "pasta" },
+    { "groupId": 2, "amount": null, "unit": null, "unitSymbol": null, "ingredientName": "smör" },
+    { "groupId": 2, "amount": 1, "unit": "piece", "unitSymbol": "st", "ingredientName": "lök" },
+    { "groupId": 2, "amount": 1, "unit": "clove", "unitSymbol": "st", "ingredientName": "vitlök" },
+    { "groupId": 3, "amount": 500, "unit": "grams", "unitSymbol": "g", "ingredientName": "kycklingfilé" },
+    { "groupId": 3, "amount": 1.5, "unit": "tablespoons", "unitSymbol": "msk", "ingredientName": "kycklingfond" },
+    { "groupId": 4, "amount": 4, "unit": "deciliters", "unitSymbol": "dl", "ingredientName": "crème fraiche" },
+    { "groupId": 4, "amount": 1, "unit": "deciliter", "unitSymbol": "dl", "ingredientName": "grädde" },
+    { "groupId": 5, "amount": 1, "unit": "tablespoon", "unitSymbol": "msk", "ingredientName": "curry" },
+    { "groupId": 5, "amount": 1, "unit": "tablespoon", "unitSymbol": "msk", "ingredientName": "paprika" },
+    { "groupId": 5, "amount": null, "unit": null, "unitSymbol": null, "ingredientName": "salt" },
+    { "groupId": 5, "amount": null, "unit": null, "unitSymbol": null, "ingredientName": "peppar" },
+    { "groupId": 5, "amount": null, "unit": null, "unitSymbol": null, "ingredientName": "Sriracha" },
+    { "groupId": 6, "amount": null, "unit": null, "unitSymbol": null, "ingredientName": "majsmjöl" },
+    { "groupId": 6, "amount": null, "unit": null, "unitSymbol": null, "ingredientName": "vatten" }
+  ],
+  "instructions": [
+    { "groupId": 1, "stepNumber": 1, "instruction": "Koka pastan enligt ansviningar." },
+    { "groupId": 3, "stepNumber": 2, "instruction": "Grovhacka lök och vitlök, stek mjukt i smör." },
+    { "groupId": 5, "stepNumber": 3, "instruction": "Tillsätt kryddor och stek i en minut." },
+    { "groupId": 2, "stepNumber": 4, "instruction": "Skär kycklingen i lagom stora bitar och lägg i pannan." },
+    { "groupId": 2, "stepNumber": 5, "instruction": "Stek tills kycklingen är färdig och häll på kycklingfonden." },
+    { "groupId": 4, "stepNumber": 6, "instruction": "Låt koka lätt och tillsätt grädde samt crème fraiche." },
+    { "groupId": 5, "stepNumber": 7, "instruction": "Smaka av med salt, peppar och Sriracha." },
+    { "groupId": 6, "stepNumber": 8, "instruction": "Om såsen blir för lös, toppred av med majsmjöl utrört i lite vatten." }
+  ]
+}
