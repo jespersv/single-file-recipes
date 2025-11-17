@@ -16,6 +16,9 @@ const searchInput = document.getElementById('search');
 const backButton = document.getElementById('back-button');
 const noResults = document.getElementById('no-results');
 
+// Router (created below once createRouter is available)
+let router = null;
+
 /**
  * Handle recipe selection and show detail view
  * @param {Object} recipe - Recipe object to display
@@ -51,7 +54,7 @@ function showRecipeList() {
  */
 function handleSearch(query) {
   const filtered = filterRecipes(recipes, query);
-  renderRecipeList(recipeList, filtered, showRecipeDetail, noResults);
+  renderRecipeList(recipeList, filtered, (r) => router.navigate('/recipe/' + r.id), noResults);
 }
 
 // ============================================================================
@@ -62,10 +65,31 @@ searchInput.addEventListener('input', (e) => {
   handleSearch(e.target.value);
 });
 
-backButton.addEventListener('click', showRecipeList);
+backButton.addEventListener('click', () => router.navigate('/'));
 
 // ============================================================================
 // Initial Setup
 // ============================================================================
 
-renderRecipeList(recipeList, recipes, showRecipeDetail, noResults);
+// Setup router and routes
+if (typeof createRouter === 'function') {
+  router = createRouter([
+    { pattern: '/', handler: () => { showRecipeList(); } },
+    { pattern: '/recipe/:id', handler: ({ id }) => {
+      // find recipe by id (number or string)
+      const found = recipes.find(r => String(r.id) === String(id));
+      if (found) {
+        // render via router-driven flow
+        showRecipeDetail(found);
+      } else {
+        showRecipeList();
+      }
+    } }
+  ]);
+  // initial render of list with router-aware navigation
+  renderRecipeList(recipeList, recipes, (r) => router.navigate('/recipe/' + r.id), noResults);
+  router.start();
+} else {
+  // fallback if router isn't present: render and use direct handlers
+  renderRecipeList(recipeList, recipes, showRecipeDetail, noResults);
+}
