@@ -53,7 +53,7 @@ function showRecipeList() {
  * @param {string} query - Search query
  */
 function handleSearch(query) {
-  const filtered = filterRecipes(recipes, query);
+  const filtered = filterRecipes(recipes, query, loadRecipes);
   renderRecipeList(recipeList, filtered, (r) => router.navigate('/recipe/' + r.id_name), noResults);
 }
 
@@ -93,3 +93,49 @@ if (typeof createRouter === 'function') {
   // fallback if router isn't present: render and use direct handlers
   renderRecipeList(recipeList, recipes, showRecipeDetail, noResults);
 }
+
+// ============================================================================
+// Search setup
+// ============================================================================
+
+let miniSearch = new MiniSearch({
+  fields: ['id_name', 'title', 'ingredients', 'instructions'],
+  tokenize: (string, _fieldName) => {
+  const words = string
+    .replace(/[^\p{L}]/gu, " ")
+    .replace(/\s+/g, " ")
+    .toLowerCase()
+    .split(" ")
+
+  const tokens = []
+
+  for (const w of words) {
+    for (let i = 1; i <= w.length; i++) {
+      tokens.push(w.slice(0, i))  // prefix n-grams
+    }
+  }
+
+  return tokens
+},
+  searchOptions: {
+    processTerm: (term) => term.toLowerCase(),
+    boost: { title: 2, id_name: 1.5, ingredients: 0.5, instructions: 0.5 },
+    fuzzy: 0.2
+  },
+  extractField: (doc, fieldName) => {
+    if (fieldName === 'ingredients') {
+      return (doc.ingredients || [])
+        .map(a => a.ingredientName || '')
+        .join(' ')
+    }
+    if (fieldName === 'instructions') {
+      return (doc.instructions || [])
+        .map(a => a.instruction || '')
+        .join(' ')
+    }
+    
+    return doc[fieldName]
+  }
+})
+
+miniSearch.addAll(recipes);

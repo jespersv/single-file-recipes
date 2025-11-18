@@ -9,6 +9,15 @@
  * @returns {Array} Filtered recipes
  */
 function filterRecipes(recipes, query) {
+  if(query === '') return recipes;
+
+  if(miniSearch !== 'undefined'){
+    var hits= miniSearch.search(query, { prefix: true });
+    const loaded = loadRecipes(recipes, hits)
+    return loaded;
+  }
+
+  console.error("MiniSearch is not defined, falling back to basic filter");
   const lowerQuery = query.toLowerCase();
   return recipes.filter(recipe =>
     recipe.title.toLowerCase().includes(lowerQuery)
