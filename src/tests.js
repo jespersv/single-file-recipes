@@ -5,7 +5,7 @@
  */
 
 // Import modules for testing
-const { filterRecipes } = require('./modules/recipeFilter');
+const { filterRecipes } = require('./modules/filterRecipes');
 const { groupIngredients, renderIngredientsHTML } = require('./modules/recipeRenderer');
 
 // Test data

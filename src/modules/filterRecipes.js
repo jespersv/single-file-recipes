@@ -4,16 +4,18 @@
 
 /**
  * Filter recipes by title
- * @param {Array<{title: string}>} recipes - Array of recipe objects
+ * @param {Array<{object: recipe}>} recipes - Array of recipe objects
+ * @param {object<{id: number}, {object: recipe}>} recipeDict - Dictionary of recipe objects
  * @param {string} query - Search query
+ * @param {func} loadRecipes - Load recipes function
  * @returns {Array} Filtered recipes
  */
-function filterRecipes(recipes, query) {
+function filterRecipes(recipes, recipeDict, query, loadRecipes) {
   if(query === '') return recipes;
 
   if(miniSearch !== 'undefined'){
     var hits= miniSearch.search(query, { prefix: true });
-    const loaded = loadRecipes(recipes, hits)
+    const loaded = loadRecipes(recipeDict, hits)
     return loaded;
   }
 

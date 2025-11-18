@@ -4,12 +4,12 @@
 
 /**
  * Filter recipes by title
- * @param {Array<{title: string}>} recipes - Array of recipe objects
- * @param {string} searchHits - Search query
+ * @param {object<{id: number}, {object: recipe}>} recipeDict - Dictionary of recipe objects
+ * @param {Array<{object: hits}>} recipes - Array of hit objects
  * @returns {Array} Loaded recipes
  */
-function loadRecipes(recipes, searchHits) {
-  return searchHits.map(s=> recipes.find(r => r.id === s.id)); //todo change to dict
+function loadRecipes(recipeDict, searchHits) {
+  return searchHits.map(s=> recipeDict[s.id]);
 }
 
 // Export for use in modules

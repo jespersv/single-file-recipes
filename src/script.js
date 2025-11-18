@@ -1,4 +1,12 @@
 // ============================================================================
+// Transform recipes to dict
+// ============================================================================
+const recipeDict = {};
+recipes.forEach(r => {
+  recipeDict[r.id] = r;
+});
+
+// ============================================================================
 // Recipe App - Main Entry Point
 // Orchestrates modules: recipeFilter, recipeRenderer, highlightManager, viewManager
 // ============================================================================
@@ -53,7 +61,7 @@ function showRecipeList() {
  * @param {string} query - Search query
  */
 function handleSearch(query) {
-  const filtered = filterRecipes(recipes, query, loadRecipes);
+  const filtered = filterRecipes(recipes, recipeDict, query, loadRecipes);
   renderRecipeList(recipeList, filtered, (r) => router.navigate('/recipe/' + r.id_name), noResults);
 }
 
