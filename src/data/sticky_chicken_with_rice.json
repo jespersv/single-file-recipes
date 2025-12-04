@@ -1,0 +1,39 @@
+{
+  "id": 12,
+  "title": "Sticky chicken med ris",
+  "serves": 4,
+  "ingredients": [
+    { "groupId": 1, "amount": 3, "unit": "deciliters", "unitSymbol": "dl", "ingredientName": "ris" },
+    { "groupId": 1, "amount": 1, "unit": "piece", "unitSymbol": "", "ingredientName": "färdiggrillad kyckling" },
+    
+    { "groupId": 4, "amount": 1, "unit": "piece", "unitSymbol": "", "ingredientName": "kålrabbi" },
+    { "groupId": 4, "amount": 1, "unit": "piece", "unitSymbol": "", "ingredientName": "gurka" },
+    { "groupId": 4, "amount": 2, "unit": "pinches", "unitSymbol": "krm", "ingredientName": "salt" },
+    { "groupId": 4, "amount": 2, "unit": "tablespoons", "unitSymbol": "msk", "ingredientName": "socker" },
+    { "groupId": 4, "amount": 2, "unit": "tablespoons", "unitSymbol": "msk", "ingredientName": "vinäger" },
+
+    { "groupId": 2, "amount": 1.5, "unit": "deciliters", "unitSymbol": "dl", "ingredientName": "sweet chilisås" },
+    { "groupId": 2, "amount": 0.5, "unit": "deciliters", "unitSymbol": "dl", "ingredientName": "ketchup" },
+    { "groupId": 2, "amount": 2, "unit": "tablespoons", "unitSymbol": "msk", "ingredientName": "sesamolja" },
+    { "groupId": 2, "amount": 1, "unit": "tablespoon", "unitSymbol": "msk", "ingredientName": "strösocker" },
+    { "groupId": 2, "amount": 1, "unit": "clove", "unitSymbol": "", "ingredientName": "riven vitlöksklyfta" },
+    { "groupId": 2, "amount": 1, "unit": "tablespoon", "unitSymbol": "msk", "ingredientName": "vinäger" },
+    { "groupId": 2, "amount": 1, "unit": "tablespoon", "unitSymbol": "msk", "ingredientName": "kinesisk soja" },
+    { "groupId": 2, "amount": 1, "unit": "tablespoon", "unitSymbol": "msk", "ingredientName": "finriven ingefära" },
+    { "groupId": 2, "amount": 0.5, "unit": "deciliters", "unitSymbol": "dl", "ingredientName": "vatten" },
+
+    { "groupId": 3, "amount": 2, "unit": "pieces", "unitSymbol": "", "ingredientName": "salladslökar" },
+    { "groupId": 3, "amount": 1, "unit": "tablespoon", "unitSymbol": "msk", "ingredientName": "sesamfrön" },
+    { "groupId": 3, "amount": null, "unit": "to taste", "unitSymbol": "", "ingredientName": "koriander" }
+  ],
+  "instructions": [
+    { "groupId": 1, "stepNumber": 1, "instruction": "Koka riset enligt anvisning på förpackningen." },
+    { "groupId": 4, "stepNumber": 2, "instruction": "Skala kålrabbi. Strimla gurka och kålrabbi." },
+    { "groupId": 4, "stepNumber": 3, "instruction": "Rör ihop salt, socker och vinäger. Blanda med gurkan och kålrabbin." },
+    { "groupId": 3, "stepNumber": 4, "instruction": "Rosta sesamfrön i stekpanna och hacka salladslök tunt och ställ åt sidan." },
+    { "groupId": 1, "stepNumber": 5, "instruction": "Plocka köttet från kycklingen och skär i bitar." },
+    { "groupId": 2, "stepNumber": 6, "instruction": "Lägg alla ingredienser till såsen i en stekpanna. Låt koka ihop några minuter. Tillsätt kycklingen och låt koka 1 minut. Späd eventuellt med mer vatten." },
+    { "groupId": 3, "stepNumber": 7, "instruction": "Servera med ris och de strimlade grönsakerna, toppa med salladslök, sesamfrön och gärna koriander." }
+  ],
+  "notes": "Kålrabbi kan bytas mot rättika eller vitkål."
+}

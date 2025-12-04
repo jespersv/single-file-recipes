@@ -1,0 +1,31 @@
+{
+  "id": 11,
+  "title": "Stekta thaifiskbollar",
+  "serves": 4,
+  "ingredients": [
+    { "groupId": 1, "amount": 500, "unit": "grams", "unitSymbol": "g", "ingredientName": "torskfilé utan skinn" },
+    { "groupId": 1, "amount": 1, "unit": "eggwhite", "unitSymbol": "", "ingredientName": "äggvita" },
+    { "groupId": 1, "amount": 2, "unit": "tablespoons", "unitSymbol": "msk", "ingredientName": "finriven ingefära" },
+    { "groupId": 1, "amount": 2, "unit": "cloves", "unitSymbol": "", "ingredientName": "finrivna vitlöksklyftor" },
+    { "groupId": 1, "amount": 1, "unit": "teaspoon", "unitSymbol": "tsk", "ingredientName": "salt" },
+    { "groupId": 1, "amount": 2, "unit": "deciliters", "unitSymbol": "dl", "ingredientName": "panko" },
+    { "groupId": 1, "amount": 3, "unit": "tablespoons", "unitSymbol": "msk", "ingredientName": "neutral olja till stekning" },
+
+    { "groupId": 2, "amount": 2, "unit": "deciliters", "unitSymbol": "dl", "ingredientName": "sweet chilisås" },
+    { "groupId": 2, "amount": 1, "unit": "tablespoon", "unitSymbol": "msk", "ingredientName": "asiatisk fisksås" },
+    { "groupId": 2, "amount": 1, "unit": "tablespoon", "unitSymbol": "msk", "ingredientName": "finriven ingefära" },
+    { "groupId": 2, "amount": 1, "unit": "clove", "unitSymbol": "", "ingredientName": "riven vitlöksklyfta" },
+    { "groupId": 2, "amount": 1, "unit": "piece", "unitSymbol": "", "ingredientName": "finrivet skal och pressad juice av 1 lime" },
+
+    { "groupId": 3, "amount": 4, "unit": "servings", "unitSymbol": "", "ingredientName": "jasminris" },
+    { "groupId": 3, "amount": 1, "unit": "deciliter", "unitSymbol": "dl", "ingredientName": "majonnäs" },
+    { "groupId": 3, "amount": 2, "unit": "deciliters", "unitSymbol": "dl", "ingredientName": "hackade jordnötter" }
+  ],
+  "instructions": [
+    { "groupId": 1, "stepNumber": 1, "instruction": "Skär fisken i mindre bitar. Lägg fisken i en matberedare tillsammans med äggvita, ingefära, vitlök och salt. Mixa hastigt ihop till en färs." },
+    { "groupId": 1, "stepNumber": 2, "instruction": "Häll upp panko på en tallrik. Rulla ca 25 bollar av färsen och rulla dem sedan i panko." },
+    { "groupId": 2, "stepNumber": 3, "instruction": "Blanda alla ingredienser till såsen." },
+    { "groupId": 1, "stepNumber": 4, "instruction": "Värm oljan i en stekpanna och stek bollarna på medelvärme 7–8 minuter tills de får fin färg." },
+    { "groupId": 3, "stepNumber": 5, "instruction": "Servera de nystekta fiskbollarna tillsammans med ris, och majonnäs, hackade jordnötter och såsen." }
+  ]
+}
