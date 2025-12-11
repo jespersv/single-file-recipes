@@ -1,0 +1,34 @@
+{
+  "id": 13,
+  "title": "Pasta med krämig ost- och skinksås",
+  "serves": 4,
+  "ingredients": [
+    { "groupId": 1,"amount": 4,"unit": "portions","unitSymbol": "port","ingredientName": "pasta (gärna gemelli)" },
+
+    { "groupId": 2,"amount": 1, "unit": "deciliter", "unitSymbol": "dl", "ingredientName": "fryst hackad lök eller 1 hackad gul lök"},
+    { "groupId": 2, "amount": 1, "unit": "tablespoon", "unitSymbol": "msk", "ingredientName": "smör eller olja" },
+
+    { "groupId": 3, "amount": 2.5, "unit": "deciliters", "unitSymbol": "dl", "ingredientName": "matlagningsgrädde" },
+    { "groupId": 3, "amount": 1.5, "unit": "deciliters", "unitSymbol": "dl", "ingredientName": "mjölk" },
+    { "groupId": 3, "amount": 2, "unit": "teaspoons", "unitSymbol": "tsk", "ingredientName": "majsstärkelse" },
+    { "groupId": 3, "amount": 2, "unit": "tablespoon", "unitSymbol": "msk", "ingredientName": "kycklingfond" },
+
+    { "groupId": 4, "amount": 2, "unit": "packages", "unitSymbol": "förp", "ingredientName": "strimlad rökt skinka (à 180 g)" },
+    { "groupId": 4, "amount": 1.5, "unit": "deciliters", "unitSymbol": "dl", "ingredientName": "riven prästost" },
+
+    { "groupId": 5, "amount": null, "unit": null, "unitSymbol": null, "ingredientName": "salt" },
+    { "groupId": 5, "amount": null, "unit": null, "unitSymbol": null, "ingredientName": "peppar" },
+
+    { "groupId": 6, "amount": 3, "unit": "pieces", "unitSymbol": "st", "ingredientName": "tomater (3–4 st)" },
+    { "groupId": 6, "amount": 0.5, "unit": "package", "unitSymbol": "förp", "ingredientName": "färsk gräslök (à 20 g)" }
+  ],
+  "instructions": [
+    { "groupId": 1, "stepNumber": 1, "instruction": "Koka pastan enligt anvisningen på förpackningen." },
+    { "groupId": 2, "stepNumber": 2, "instruction": "Stek löken i smöret eller oljan i en stekpanna eller kastrull." },
+    { "groupId": 3, "stepNumber": 3, "instruction": "Sänk värmen och blanda i grädden och majsstärkelsen utrörd i mjölken. Smula i buljongtärningen och koka upp under omrörning." },
+    { "groupId": 4, "stepNumber": 4, "instruction": "Rör i skinkan och osten och låt allt bli varmt." },
+    { "groupId": 5, "stepNumber": 5, "instruction": "Smaka av med salt och peppar." },
+    { "groupId": 6, "stepNumber": 6, "instruction": "Skär tomaterna och hacka gräslöken." },
+    { "groupId": 1, "stepNumber": 7, "instruction": "Servera pastan med ost- och skinksås, tomater och gräslök." }
+  ]
+}

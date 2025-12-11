@@ -49,10 +49,10 @@ async function build() {
   const srcDir = path.join(root, 'src');
   const modulesDir = path.join(srcDir, 'modules');
   const outDir = path.join(root, 'docs');
+  const dataDir = path.join(srcDir, 'data');
 
   const indexPath = path.join(srcDir, 'index.html');
   const stylePath = path.join(srcDir, 'styling.css');
-  const dataDir = path.join(srcDir, 'data');
   const scriptPath = path.join(srcDir, 'script.js');
 
   const [indexHtml, styleCss, scriptJs, modulesJs] = await Promise.all([
@@ -121,8 +121,6 @@ async function build() {
 
   // Replace build date placeholder
   out = out.replace('%BUILDDATE_PLACEHOLDER%', new Date().toISOString());
-
-  
 
   await ensureDir(outDir);
   const outPath = path.join(outDir, 'index.html');
