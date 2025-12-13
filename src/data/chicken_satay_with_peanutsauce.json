@@ -1,0 +1,38 @@
+{
+  "id": 14,
+  "title": "Kyckling satay med jordnötssås",
+  "serves": 4,
+  "ingredients": [
+    { "groupId": 1, "amount": 3, "unit": "piece", "unitSymbol": "st", "ingredientName": "kycklingfilé" },
+
+    { "groupId": 2, "amount": 1, "unit": "teaspoon", "unitSymbol": "tsk", "ingredientName": "ingefära, finhackad" },
+    { "groupId": 2, "amount": 3, "unit": "cloves", "unitSymbol": "st", "ingredientName": "vitlök, pressad" },
+    { "groupId": 2, "amount": 1, "unit": "piece", "unitSymbol": "st", "ingredientName": "citrongräs eller limeblad" },
+    { "groupId": 2, "amount": 2, "unit": "tablespoon", "unitSymbol": "msk", "ingredientName": "soja" },
+    { "groupId": 2, "amount": 2, "unit": "tablespoon", "unitSymbol": "msk", "ingredientName": "fisksås" },
+    { "groupId": 2, "amount": 2, "unit": "tablespoon", "unitSymbol": "msk", "ingredientName": "olja" },
+    { "groupId": 2, "amount": 4, "unit": "tablespoon", "unitSymbol": "msk", "ingredientName": "palmsocker eller ljust råsocker" },
+    { "groupId": 2, "amount": 1, "unit": "teaspoon", "unitSymbol": "tsk", "ingredientName": "gurkmeja" },
+    { "groupId": 2, "amount": 1, "unit": "teaspoon", "unitSymbol": "tsk", "ingredientName": "korianderpulver" },
+
+    { "groupId": 3, "amount": 1, "unit": "dl", "unitSymbol": "dl", "ingredientName": "jordnötssmör, osötat med bitar" },
+    { "groupId": 3, "amount": 200, "unit": "g", "unitSymbol": "g", "ingredientName": "kokosmjölk" },
+    { "groupId": 3, "amount": 1, "unit": "piece", "unitSymbol": "st", "ingredientName": "lök" },
+    { "groupId": 3, "amount": 1, "unit": "clove", "unitSymbol": "st", "ingredientName": "vitlök" },
+    { "groupId": 3, "amount": 1, "unit": "teaspoon", "unitSymbol": "tsk", "ingredientName": "ingefära, finhackad" },
+    { "groupId": 3, "amount": 1, "unit": "piece", "unitSymbol": "st", "ingredientName": "röd chili" },
+    { "groupId": 3, "amount": 1, "unit": "teaspoon", "unitSymbol": "tsk", "ingredientName": "röd curry eller sambal oelek" },
+    { "groupId": 3, "amount": 2, "unit": "tablespoon", "unitSymbol": "msk", "ingredientName": "palmsocker eller ljust råsocker" },
+    { "groupId": 3, "amount": 1, "unit": "tablespoon", "unitSymbol": "msk", "ingredientName": "soja" },
+    { "groupId": 3, "amount": null, "unit": null, "unitSymbol": null, "ingredientName": "salt" }
+  ],
+  "instructions": [
+    { "groupId": 1, "stepNumber": 1, "instruction": "Blanda alla ingredienser till marinaden och låt stå i 10–15 minuter." },
+    { "groupId": 1, "stepNumber": 2, "instruction": "Skär kycklingen i bitar och blanda väl med marinaden. Låt marinera minst 1 timme i rumstemperatur eller över natten i kyl." },
+    { "groupId": 1, "stepNumber": 3, "instruction": "Blötlägg träspett i vatten i 30 minuter vid användning. Trä kycklingen på spett och grilla på grill eller i ugn på 225°C med grillfunktion i cirka 15 minuter tills genomstekt." },
+    { "groupId": 2, "stepNumber": 4, "instruction": "Hacka lök, vitlök, ingefära och chili. Stek i olja på medelvärme tills löken mjuknar." },
+    { "groupId": 2, "stepNumber": 5, "instruction": "Tillsätt röd curry eller sambal oelek och fräs kort. Sänk värmen och rör ner jordnötssmör." },
+    { "groupId": 2, "stepNumber": 6, "instruction": "Mixa slätt. Tillsätt kokosmjölk, socker och soja. Smaka av med salt och låt sjuda 3–5 minuter under omrörning." },
+    { "groupId": 3, "stepNumber": 7, "instruction": "Späd med mer kokosmjölk vid behov. Servera såsen varm eller kall till kycklingspetten." }
+  ]
+}
