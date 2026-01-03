@@ -1,0 +1,15 @@
+{
+  "id": 15,
+  "title": "Gräddglass",
+  "serves": null,
+  "ingredients": [
+    { "groupId": 1, "amount": 1, "unit": "dl", "unitSymbol": "dl", "ingredientName": "grapejuice" },
+    { "groupId": 1, "amount": 1, "unit": "can", "unitSymbol": "burk", "ingredientName": "kondenserad mjölk" },
+    { "groupId": 1, "amount": 5, "unit": "dl", "unitSymbol": "dl", "ingredientName": "vispgrädde" },
+    { "groupId": 1, "amount": 1, "unit": "krm", "unitSymbol": "krm", "ingredientName": "vaniljpulver" }
+  ],
+  "instructions": [
+    { "groupId": 1, "stepNumber": 1, "instruction": "Blanda ihop alla ingredienser i en bunke." },
+    { "groupId": 1, "stepNumber": 2, "instruction": "Häll smeten i glassmaskinen." }
+  ]
+}

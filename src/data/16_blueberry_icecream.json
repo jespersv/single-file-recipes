@@ -1,0 +1,16 @@
+{
+  "id": 16,
+  "title": "Blåbärsgräddglass",
+  "serves": null,
+  "ingredients": [
+    { "groupId": 1, "amount": 250, "unit": "g", "unitSymbol": "g", "ingredientName": "blåbär" },
+    { "groupId": 1, "amount": 1, "unit": "can", "unitSymbol": "burk", "ingredientName": "kondenserad mjölk" },
+    { "groupId": 1, "amount": 4, "unit": "dl", "unitSymbol": "dl", "ingredientName": "vispgrädde" },
+    { "groupId": 1, "amount": 1, "unit": "krm", "unitSymbol": "krm", "ingredientName": "vaniljpulver" }
+  ],
+  "instructions": [
+    { "groupId": 1, "stepNumber": 1, "instruction": "Mixa blåbären släta tillsammans med den kondenserade mjölken." },
+    { "groupId": 1, "stepNumber": 2, "instruction": "Blanda ner resterande ingredienser." },
+    { "groupId": 1, "stepNumber": 3, "instruction": "Häll smeten i glassmaskinen." }
+  ]
+}
