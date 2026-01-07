@@ -1,0 +1,51 @@
+{
+  "id_name": "lasagne_bolognese",
+  "id": 19,
+  "title": "Lasagne",
+  "serves": 4,
+  "ingredients": [
+    { "groupId": 1, "amount": 3, "unit": "piece", "unitSymbol": "st", "ingredientName": "ägg" },
+    { "groupId": 1, "amount": 5, "unit": "dl", "unitSymbol": "dl", "ingredientName": "durumvete" },
+    { "groupId": 1, "amount": 1.5, "unit": "tablespoon", "unitSymbol": "msk", "ingredientName": "olivolja" },
+    { "groupId": 1, "amount": null, "unit": null, "unitSymbol": null, "ingredientName": "vatten" },
+
+    { "groupId": 2, "amount": 60, "unit": "g", "unitSymbol": "g", "ingredientName": "pancetta" },
+    { "groupId": 2, "amount": 0.5, "unit": "dl", "unitSymbol": "dl", "ingredientName": "olivolja" },
+    { "groupId": 2, "amount": 400, "unit": "g", "unitSymbol": "g", "ingredientName": "köttfärs" },
+    { "groupId": 2, "amount": 1, "unit": "tablespoon", "unitSymbol": "msk", "ingredientName": "tomatpuré" },
+    { "groupId": 2, "amount": 1, "unit": "clove", "unitSymbol": "st", "ingredientName": "vitlök" },
+    { "groupId": 2, "amount": 1, "unit": "piece", "unitSymbol": "st", "ingredientName": "gul lök" },
+    { "groupId": 2, "amount": 1, "unit": "piece", "unitSymbol": "st", "ingredientName": "morot" },
+    { "groupId": 2, "amount": 1, "unit": "stalk", "unitSymbol": "st", "ingredientName": "selleri" },
+    { "groupId": 2, "amount": 1, "unit": "dl", "unitSymbol": "dl", "ingredientName": "rött vin" },
+    { "groupId": 2, "amount": 2, "unit": "can", "unitSymbol": "burk", "ingredientName": "hela skalade tomater" },
+    { "groupId": 2, "amount": 1, "unit": "tablespoon", "unitSymbol": "msk", "ingredientName": "kalvfond" },
+    { "groupId": 2, "amount": 1, "unit": "piece", "unitSymbol": "st", "ingredientName": "lagerblad" },
+    { "groupId": 2, "amount": 7, "unit": "piece", "unitSymbol": "st", "ingredientName": "svartpepparkorn" },
+    { "groupId": 2, "amount": 1, "unit": "sprig", "unitSymbol": "kvist", "ingredientName": "rosmarin" },
+    { "groupId": 2, "amount": 1.25, "unit": "dl", "unitSymbol": "dl", "ingredientName": "vatten" },
+
+    { "groupId": 3, "amount": 2.5, "unit": "tablespoon", "unitSymbol": "msk", "ingredientName": "vetemjöl" },
+    { "groupId": 3, "amount": 60, "unit": "g", "unitSymbol": "g", "ingredientName": "smör" },
+    { "groupId": 3, "amount": 2, "unit": "dl", "unitSymbol": "dl", "ingredientName": "grädde" },
+    { "groupId": 3, "amount": 6, "unit": "dl", "unitSymbol": "dl", "ingredientName": "mjölk" },
+    { "groupId": 3, "amount": 0.5, "unit": "teaspoon", "unitSymbol": "tsk", "ingredientName": "muskotnöt" },
+    { "groupId": 3, "amount": 2.5, "unit": "tablespoon", "unitSymbol": "msk", "ingredientName": "vitt vin" },
+    { "groupId": 3, "amount": 2.5, "unit": "tablespoon", "unitSymbol": "msk", "ingredientName": "riven parmesan" },
+    { "groupId": 3, "amount": null, "unit": null, "unitSymbol": null, "ingredientName": "salt och peppar" }
+  ],
+  "instructions": [
+    { "groupId": 1, "stepNumber": 1, "instruction": "Lägg durumvetet i matberedare. Tillsätt två ägg och arbeta 8–10 minuter. Tillsätt sista ägget och olivoljan. Justera med vatten tills degen är fast. Forma till boll, slå in i plast och låt vila minst 1 timme." },
+    { "groupId": 1, "stepNumber": 2, "instruction": "Kavla degen tunt i pastamaskin, vik och kör flera gånger. Skär till pastaplattor. Koka i saltat vatten 2–3 minuter och kyl i iskallt vatten." },
+
+    { "groupId": 2, "stepNumber": 3, "instruction": "Tärna pancetta och stek krispig i gryta. Ta upp. Tillsätt olivolja och bryn köttfärsen hårt. Rör ner tomatpuré mot slutet." },
+    { "groupId": 2, "stepNumber": 4, "instruction": "Finhacka lök, vitlök, morot och selleri. Rör ner och låt svettas. Tillsätt vin och låt koka bort." },
+    { "groupId": 2, "stepNumber": 5, "instruction": "Tillsätt tomater, fond, rosmarin, lagerblad, pepparkorn och vatten. Låt sjuda 3–4 timmar. Smaka av med salt, peppar och vin." },
+    { "groupId": 2, "stepNumber": 6, "instruction": "Tillsätt tärnad ossobuco om önskat och låt koka med minst 1 timme." },
+
+    { "groupId": 3, "stepNumber": 7, "instruction": "Smält smöret, rör i mjölet. Vispa i mjölk och grädde och koka upp. Krydda med muskot, salt och peppar. Rör i parmesan och låt svalna." },
+
+    { "groupId": 4, "stepNumber": 8, "instruction": "Varva béchamel, pasta och köttfärssås i smord form. Avsluta med béchamel och parmesan." },
+    { "groupId": 4, "stepNumber": 9, "instruction": "Grädda i 175–180°C i cirka 35 minuter tills gyllene. Servera med sallad." }
+  ]
+}
