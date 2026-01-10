@@ -1,0 +1,24 @@
+{
+  "id_name": "hummus",
+  "id": 21,
+  "title": "Hummus",
+  "serves": null,
+  "ingredients": [
+    { "groupId": 1, "amount": 1, "unit": "clove", "unitSymbol": "st", "ingredientName": "vitlöksklyfta" },
+    { "groupId": 1, "amount": 400, "unit": "gram", "unitSymbol": "g", "ingredientName": "kikärtor" },
+    { "groupId": 1, "amount": 0.5, "unit": "piece", "unitSymbol": "st", "ingredientName": "chilifrukt" },
+    { "groupId": 1, "amount": 0.5, "unit": "teaspoon", "unitSymbol": "tsk", "ingredientName": "spiskummin" },
+    { "groupId": 1, "amount": 1, "unit": "tablespoon", "unitSymbol": "msk", "ingredientName": "pressad citronjuice" },
+    { "groupId": 1, "amount": 1, "unit": "dl", "unitSymbol": "dl", "ingredientName": "olivolja" },
+    { "groupId": 1, "amount": 1, "unit": "tablespoon", "unitSymbol": "msk", "ingredientName": "tahini" },
+    { "groupId": 1, "amount": null, "unit": null, "unitSymbol": null, "ingredientName": "salt" },
+    { "groupId": 1, "amount": null, "unit": null, "unitSymbol": null, "ingredientName": "peppar" },
+    { "groupId": 1, "amount": null, "unit": null, "unitSymbol": null, "ingredientName": "paprika" }
+  ],
+  "instructions": [
+    { "groupId": 1, "stepNumber": 1, "instruction": "Mixa alla ingredienser till en jämn smet." },
+    { "groupId": 1, "stepNumber": 2, "instruction": "Smaksätt med salt och peppar." },
+    { "groupId": 1, "stepNumber": 3, "instruction": "Häll över lite extra olivolja. Och paprika krydda." },
+    { "groupId": 1, "stepNumber": 3, "instruction": "Förvara kallt till servering." }
+  ]
+}
