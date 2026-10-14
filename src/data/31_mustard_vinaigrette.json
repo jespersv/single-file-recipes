@@ -1,0 +1,62 @@
+{
+  "id_name": "mustard_vinaigrette",
+  "id": 31,
+  "title": "Senapsvinägrett",
+  "serves": null,
+  "ingredients": [
+    {
+      "groupId": 1,
+      "amount": 0.5,
+      "unit": "dl",
+      "unitSymbol": "dl",
+      "ingredientName": "grovkornig senap"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "äppelcidervinäger"
+    },
+    {
+      "groupId": 1,
+      "amount": 1.5,
+      "unit": "dl",
+      "unitSymbol": "dl",
+      "ingredientName": "rapsolja"
+    },
+    {
+      "groupId": 1,
+      "amount": 2.5,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "vatten"
+    },
+    {
+      "groupId": 1,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "flingsalt"
+    },
+    {
+      "groupId": 1,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "peppar, valfritt"
+    }
+  ],
+  "instructions": [
+    {
+      "groupId": 1,
+      "stepNumber": 1,
+      "instruction": "Blanda senap och äppelcidervinäger. Vispa kraftigt medan du droppar i rapsoljan."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 2,
+      "instruction": "Späd med vatten och smaka av med flingsalt och eventuellt peppar."
+    }
+  ]
+}

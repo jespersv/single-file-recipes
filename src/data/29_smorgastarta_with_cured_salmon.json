@@ -1,0 +1,161 @@
+{
+  "id_name": "smorgastarta_with_cured_salmon",
+  "id": 29,
+  "title": "Smörgåstårta med gravad lax",
+  "serves": null,
+  "ingredients": [
+    {
+      "groupId": 1,
+      "amount": 12,
+      "unit": "piece",
+      "unitSymbol": "skiva",
+      "ingredientName": "landgångsbröd eller formfranska"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "can",
+      "unitSymbol": "burk",
+      "ingredientName": "tonfisk"
+    },
+    {
+      "groupId": 1,
+      "amount": 1.5,
+      "unit": "dl",
+      "unitSymbol": "dl",
+      "ingredientName": "majonnäs"
+    },
+    {
+      "groupId": 1,
+      "amount": 4,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "kaviar"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "citronsaft"
+    },
+    {
+      "groupId": 1,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "svartpeppar"
+    },
+    {
+      "groupId": 2,
+      "amount": 2,
+      "unit": "piece",
+      "unitSymbol": "st",
+      "ingredientName": "hårdkokta ägg"
+    },
+    {
+      "groupId": 2,
+      "amount": 200,
+      "unit": "gram",
+      "unitSymbol": "g",
+      "ingredientName": "skalade räkor"
+    },
+    {
+      "groupId": 2,
+      "amount": 1,
+      "unit": "dl",
+      "unitSymbol": "dl",
+      "ingredientName": "crème fraiche"
+    },
+    {
+      "groupId": 2,
+      "amount": 1,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "majonnäs"
+    },
+    {
+      "groupId": 2,
+      "amount": 4,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "hackad gräslök"
+    },
+    {
+      "groupId": 3,
+      "amount": 1.5,
+      "unit": "dl",
+      "unitSymbol": "dl",
+      "ingredientName": "majonnäs"
+    },
+    {
+      "groupId": 3,
+      "amount": 1,
+      "unit": "dl",
+      "unitSymbol": "dl",
+      "ingredientName": "hackad dill"
+    },
+    {
+      "groupId": 3,
+      "amount": 1,
+      "unit": "piece",
+      "unitSymbol": "st",
+      "ingredientName": "citron"
+    },
+    {
+      "groupId": 3,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "gurkskivor"
+    },
+    {
+      "groupId": 3,
+      "amount": 5,
+      "unit": "piece",
+      "unitSymbol": "st",
+      "ingredientName": "hårdkokta ägg, skivade"
+    },
+    {
+      "groupId": 3,
+      "amount": 200,
+      "unit": "gram",
+      "unitSymbol": "g",
+      "ingredientName": "gravad lax"
+    },
+    {
+      "groupId": 3,
+      "amount": 1,
+      "unit": "can",
+      "unitSymbol": "burk",
+      "ingredientName": "svart stenbitsrom"
+    }
+  ],
+  "instructions": [
+    {
+      "groupId": 1,
+      "stepNumber": 1,
+      "instruction": "Blanda tonfisk, majonnäs, kaviar, citronsaft och svartpeppar. Bred hälften på det första brödlagret."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 2,
+      "instruction": "Blanda crème fraiche, majonnäs, hackade ägg, räkor och gräslök."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 3,
+      "instruction": "Lägg på ett nytt brödlager och bred ut fyllningen. Upprepa med ett tredje brödlager och resten av fyllningen."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 4,
+      "instruction": "Lägg på det sista brödlagret och bred majonnäs ovanpå och runt sidorna."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 5,
+      "instruction": "Garnera sidorna med dill, citron och gurka. Garnera toppen med laxrosor, äggskivor, citron och stenbitsrom."
+    }
+  ]
+}

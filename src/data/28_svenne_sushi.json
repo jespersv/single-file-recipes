@@ -1,0 +1,76 @@
+{
+  "id_name": "svenne_sushi",
+  "id": 28,
+  "title": "Svennesushi",
+  "serves": null,
+  "ingredients": [
+    {
+      "groupId": 1,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "gravad lax"
+    },
+    {
+      "groupId": 1,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "mjukost, naturell eller med pepparrot"
+    },
+    {
+      "groupId": 1,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "tunnbröd"
+    },
+    {
+      "groupId": 1,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "gravlaxsås"
+    },
+    {
+      "groupId": 1,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "salladsblad eller gräslök"
+    },
+    {
+      "groupId": 1,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "gurka"
+    },
+    {
+      "groupId": 1,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "wasabi"
+    },
+    {
+      "groupId": 1,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "ljus soja"
+    }
+  ],
+  "instructions": [
+    {
+      "groupId": 1,
+      "stepNumber": 1,
+      "instruction": "Bred mjukost på tunnbrödet. Lägg på lax, tunt skivad gurka och gräslök eller sallad. Rulla ihop."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 2,
+      "instruction": "Skär rullen i cirka 2 cm tjocka skivor. Servera med wasabi och soja."
+    }
+  ]
+}

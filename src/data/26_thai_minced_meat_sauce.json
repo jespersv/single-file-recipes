@@ -1,0 +1,151 @@
+{
+  "id_name": "thai_minced_meat_sauce",
+  "id": 26,
+  "title": "Thailändsk köttfärssås",
+  "serves": null,
+  "ingredients": [
+    {
+      "groupId": 1,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "köttfärs"
+    },
+    {
+      "groupId": 1,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "basilika"
+    },
+    {
+      "groupId": 1,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "grönsaksbuljong"
+    },
+    {
+      "groupId": 1,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "socker"
+    },
+    {
+      "groupId": 1,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "fisksås"
+    },
+    {
+      "groupId": 1,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "soja"
+    },
+    {
+      "groupId": 1,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "ostronsås"
+    },
+    {
+      "groupId": 1,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "vitvinsvinäger"
+    },
+    {
+      "groupId": 1,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "chili"
+    },
+    {
+      "groupId": 1,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "vitlök"
+    },
+    {
+      "groupId": 1,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "lök"
+    },
+    {
+      "groupId": 1,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "paprika"
+    },
+    {
+      "groupId": 1,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "ingefära"
+    },
+    {
+      "groupId": 1,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "morötter"
+    },
+    {
+      "groupId": 1,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "svamp"
+    },
+    {
+      "groupId": 1,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "haricots verts"
+    },
+    {
+      "groupId": 1,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "olivolja"
+    },
+    {
+      "groupId": 1,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "salt och svartpeppar"
+    }
+  ],
+  "instructions": [
+    {
+      "groupId": 1,
+      "stepNumber": 1,
+      "instruction": "Värm olivolja i en stekpanna. Fräs hackad lök och köttfärs."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 2,
+      "instruction": "Tillsätt kryddor och rör om. Häll på lite vatten om blandningen blir torr."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 3,
+      "instruction": "Tillsätt grönsakerna och låt sjuda i 10–15 minuter. Smaka av med salt och svartpeppar."
+    }
+  ]
+}

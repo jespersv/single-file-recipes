@@ -1,0 +1,76 @@
+{
+  "id_name": "pasta_with_ham_and_cheese_sauce",
+  "id": 38,
+  "title": "Pasta med ost- och skinksås",
+  "serves": null,
+  "ingredients": [
+    {
+      "groupId": 1,
+      "amount": 200,
+      "unit": "gram",
+      "unitSymbol": "g",
+      "ingredientName": "rökt skinka"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "teaspoon",
+      "unitSymbol": "tsk",
+      "ingredientName": "vetemjöl"
+    },
+    {
+      "groupId": 1,
+      "amount": 2.5,
+      "unit": "dl",
+      "unitSymbol": "dl",
+      "ingredientName": "matlagningsgrädde"
+    },
+    {
+      "groupId": 1,
+      "amount": 1.5,
+      "unit": "dl",
+      "unitSymbol": "dl",
+      "ingredientName": "riven ost"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "teaspoon",
+      "unitSymbol": "tsk",
+      "ingredientName": "torkad oregano"
+    },
+    {
+      "groupId": 1,
+      "amount": 0.5,
+      "unit": "pinch",
+      "unitSymbol": "krm",
+      "ingredientName": "peppar"
+    },
+    {
+      "groupId": 1,
+      "amount": 400,
+      "unit": "gram",
+      "unitSymbol": "g",
+      "ingredientName": "spaghetti"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "smör"
+    }
+  ],
+  "instructions": [
+    {
+      "groupId": 1,
+      "stepNumber": 1,
+      "instruction": "Strimla skinkan och stek i smör i 1 minut. Strö över mjölet och blanda. Häll på grädde och tillsätt ost."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 2,
+      "instruction": "Krydda med peppar och oregano. Koka några minuter och servera med spaghetti."
+    }
+  ]
+}

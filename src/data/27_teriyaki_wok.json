@@ -1,0 +1,88 @@
+{
+  "id_name": "teriyaki_wok",
+  "id": 27,
+  "title": "Teriyakiwok",
+  "serves": null,
+  "ingredients": [
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "dl",
+      "unitSymbol": "dl",
+      "ingredientName": "soja"
+    },
+    {
+      "groupId": 1,
+      "amount": 0.5,
+      "unit": "dl",
+      "unitSymbol": "dl",
+      "ingredientName": "vatten"
+    },
+    {
+      "groupId": 1,
+      "amount": 1.5,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "riven ingefära"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "piece",
+      "unitSymbol": "st",
+      "ingredientName": "vitlöksklyfta"
+    },
+    {
+      "groupId": 1,
+      "amount": 1.5,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "risvin"
+    },
+    {
+      "groupId": 1,
+      "amount": 2,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "farinsocker"
+    },
+    {
+      "groupId": 1,
+      "amount": 2,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "socker"
+    },
+    {
+      "groupId": 2,
+      "amount": 2,
+      "unit": "piece",
+      "unitSymbol": "st",
+      "ingredientName": "kycklingfiléer"
+    },
+    {
+      "groupId": 2,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "wokgrönsaker"
+    }
+  ],
+  "instructions": [
+    {
+      "groupId": 1,
+      "stepNumber": 1,
+      "instruction": "Blanda ingredienserna till såsen i ett glas."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 2,
+      "instruction": "Woka kycklingfiléerna och grönsakerna."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 3,
+      "instruction": "Blanda ner såsen och låt allt bli varmt."
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "id_name": "tuna_salad",
+  "id": 24,
+  "title": "Tonfisksallad",
+  "serves": null,
+  "ingredients": [
+    {
+      "groupId": 1,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "tonfisk på burk"
+    },
+    {
+      "groupId": 1,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "cannellonibönor"
+    },
+    {
+      "groupId": 1,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "majs"
+    },
+    {
+      "groupId": 1,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "rödlök"
+    },
+    {
+      "groupId": 1,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "gurka"
+    },
+    {
+      "groupId": 1,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "morötter"
+    },
+    {
+      "groupId": 1,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "glasnudlar"
+    },
+    {
+      "groupId": 2,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "wasabi"
+    },
+    {
+      "groupId": 2,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "ljus soja"
+    },
+    {
+      "groupId": 2,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "risvinäger"
+    },
+    {
+      "groupId": 2,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "äppelcidervinäger"
+    },
+    {
+      "groupId": 2,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "majsolja"
+    },
+    {
+      "groupId": 2,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "socker"
+    }
+  ],
+  "instructions": [
+    {
+      "groupId": 1,
+      "stepNumber": 1,
+      "instruction": "Blanda ingredienserna till salladen."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 2,
+      "instruction": "Rör ihop wasabi, soja, risvinäger, äppelcidervinäger, majsolja och socker till en dressing och servera till salladen."
+    }
+  ]
+}

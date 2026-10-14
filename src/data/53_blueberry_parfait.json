@@ -1,0 +1,74 @@
+{
+  "id_name": "blueberry_parfait",
+  "id": 53,
+  "title": "Blåbärsparfait",
+  "serves": null,
+  "ingredients": [
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "piece",
+      "unitSymbol": "st",
+      "ingredientName": "lime"
+    },
+    {
+      "groupId": 1,
+      "amount": 3,
+      "unit": "dl",
+      "unitSymbol": "dl",
+      "ingredientName": "blåbär"
+    },
+    {
+      "groupId": 1,
+      "amount": 2,
+      "unit": "dl",
+      "unitSymbol": "dl",
+      "ingredientName": "florsocker"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "finhackad mynta"
+    },
+    {
+      "groupId": 1,
+      "amount": 3,
+      "unit": "piece",
+      "unitSymbol": "st",
+      "ingredientName": "äggvitor"
+    },
+    {
+      "groupId": 1,
+      "amount": 2,
+      "unit": "dl",
+      "unitSymbol": "dl",
+      "ingredientName": "vispgrädde"
+    },
+    {
+      "groupId": 1,
+      "amount": 250,
+      "unit": "gram",
+      "unitSymbol": "g",
+      "ingredientName": "mascarponeost"
+    }
+  ],
+  "instructions": [
+    {
+      "groupId": 1,
+      "stepNumber": 1,
+      "instruction": "Skölj limen och riv skalet. Pressa saften och blanda med skal, blåbär, 0,5 dl florsocker och mynta."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 2,
+      "instruction": "Vispa äggvitorna med resterande florsocker till ett hårt skum. Vispa grädden relativt hårt och blanda med mascarpone. Vänd ner blåbären och sedan äggvitorna."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 3,
+      "instruction": "Häll smeten i en 1,5-litersform, täck och frys cirka 6 timmar. Ta fram parfaiten cirka 30 minuter före servering."
+    }
+  ]
+}

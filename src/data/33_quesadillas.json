@@ -1,0 +1,118 @@
+{
+  "id_name": "quesadillas",
+  "id": 33,
+  "title": "Quesadillas",
+  "serves": 4,
+  "ingredients": [
+    {
+      "groupId": 1,
+      "amount": 8,
+      "unit": "piece",
+      "unitSymbol": "st",
+      "ingredientName": "tortillas (8–12)"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "piece",
+      "unitSymbol": "st",
+      "ingredientName": "rödlök"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "piece",
+      "unitSymbol": "st",
+      "ingredientName": "gul paprika"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "can",
+      "unitSymbol": "burk",
+      "ingredientName": "majs"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "dl",
+      "unitSymbol": "dl",
+      "ingredientName": "soltorkade tomater"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "bunch",
+      "unitSymbol": "kruka",
+      "ingredientName": "basilika"
+    },
+    {
+      "groupId": 1,
+      "amount": 2,
+      "unit": "dl",
+      "unitSymbol": "dl",
+      "ingredientName": "riven ost, minst"
+    },
+    {
+      "groupId": 1,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "salt och peppar"
+    },
+    {
+      "groupId": 2,
+      "amount": 200,
+      "unit": "gram",
+      "unitSymbol": "g",
+      "ingredientName": "grillad paprika, valfritt"
+    },
+    {
+      "groupId": 2,
+      "amount": 2,
+      "unit": "dl",
+      "unitSymbol": "dl",
+      "ingredientName": "gröna eller svarta oliver, urkärnade"
+    },
+    {
+      "groupId": 2,
+      "amount": 200,
+      "unit": "gram",
+      "unitSymbol": "g",
+      "ingredientName": "halloumi"
+    },
+    {
+      "groupId": 2,
+      "amount": 0.5,
+      "unit": "piece",
+      "unitSymbol": "st",
+      "ingredientName": "chili, valfritt"
+    },
+    {
+      "groupId": 2,
+      "amount": 0.5,
+      "unit": "piece",
+      "unitSymbol": "st",
+      "ingredientName": "citronskal"
+    },
+    {
+      "groupId": 2,
+      "amount": 2,
+      "unit": "dl",
+      "unitSymbol": "dl",
+      "ingredientName": "riven ost"
+    }
+  ],
+  "instructions": [
+    {
+      "groupId": 1,
+      "stepNumber": 1,
+      "instruction": "Hacka och blanda lök, paprika, basilika och soltorkade tomater. Tillsätt majs, ost, salt och peppar."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 2,
+      "instruction": "Lägg fyllning på ena halvan av en tortilla och vik ihop. Stek på båda sidor i en torr stekpanna på medelvärme tills osten smält och tortillan fått färg. Tillsätt lite olja i pannan för ett krispigare resultat."
+    }
+  ]
+}

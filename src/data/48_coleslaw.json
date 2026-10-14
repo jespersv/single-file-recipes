@@ -1,0 +1,83 @@
+{
+  "id_name": "coleslaw",
+  "id": 48,
+  "title": "Coleslaw",
+  "serves": 4,
+  "ingredients": [
+    {
+      "groupId": 1,
+      "amount": 250,
+      "unit": "gram",
+      "unitSymbol": "g",
+      "ingredientName": "finstrimlad vitkål"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "piece",
+      "unitSymbol": "st",
+      "ingredientName": "liten morot"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "piece",
+      "unitSymbol": "st",
+      "ingredientName": "liten rödlök"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "dl",
+      "unitSymbol": "dl",
+      "ingredientName": "crème fraiche"
+    },
+    {
+      "groupId": 1,
+      "amount": 0.5,
+      "unit": "dl",
+      "unitSymbol": "dl",
+      "ingredientName": "majonnäs"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "teaspoon",
+      "unitSymbol": "tsk",
+      "ingredientName": "fransk senap"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "teaspoon",
+      "unitSymbol": "tsk",
+      "ingredientName": "socker"
+    },
+    {
+      "groupId": 1,
+      "amount": 0.5,
+      "unit": "teaspoon",
+      "unitSymbol": "tsk",
+      "ingredientName": "salt"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "pinch",
+      "unitSymbol": "krm",
+      "ingredientName": "grovmalen svartpeppar"
+    }
+  ],
+  "instructions": [
+    {
+      "groupId": 1,
+      "stepNumber": 1,
+      "instruction": "Strimla vitkålen tunt. Skala och riv moroten fint. Skala och skiva rödlöken tunt."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 2,
+      "instruction": "Rör ihop crème fraiche, majonnäs och senap. Smaksätt med socker, salt och peppar. Blanda med grönsakerna och låt stå kallt en stund."
+    }
+  ]
+}

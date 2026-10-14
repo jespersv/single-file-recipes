@@ -1,0 +1,79 @@
+{
+  "id_name": "apple_pie",
+  "id": 22,
+  "title": "Äppelpaj",
+  "serves": null,
+  "ingredients": [
+    {
+      "groupId": 1,
+      "amount": 600,
+      "unit": "gram",
+      "unitSymbol": "g",
+      "ingredientName": "äpplen"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "dl",
+      "unitSymbol": "dl",
+      "ingredientName": "socker"
+    },
+    {
+      "groupId": 1,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "kanel"
+    },
+    {
+      "groupId": 2,
+      "amount": 110,
+      "unit": "gram",
+      "unitSymbol": "g",
+      "ingredientName": "socker"
+    },
+    {
+      "groupId": 2,
+      "amount": 175,
+      "unit": "gram",
+      "unitSymbol": "g",
+      "ingredientName": "vetemjöl"
+    },
+    {
+      "groupId": 2,
+      "amount": 110,
+      "unit": "gram",
+      "unitSymbol": "g",
+      "ingredientName": "smör"
+    },
+    {
+      "groupId": 3,
+      "amount": 1,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "havregryn"
+    }
+  ],
+  "instructions": [
+    {
+      "groupId": 1,
+      "stepNumber": 1,
+      "instruction": "Skala och skiva äpplena och lägg dem i en form. Strö över socker och kanel och blanda."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 2,
+      "instruction": "Blanda socker, mjöl och smör till en smulig deg."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 3,
+      "instruction": "Häll blandningen över äpplena och strö havregryn överst."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 4,
+      "instruction": "Grädda i 190 °C i cirka 35 minuter, tills pajen är gyllenbrun och äpplena mjuka."
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "id_name": "pulled_pork",
+  "id": 34,
+  "title": "Pulled pork",
+  "serves": 6,
+  "ingredients": [
+    {
+      "groupId": 1,
+      "amount": 2,
+      "unit": "piece",
+      "unitSymbol": "st",
+      "ingredientName": "gula lökar"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "piece",
+      "unitSymbol": "st",
+      "ingredientName": "vitlöksklyfta"
+    },
+    {
+      "groupId": 1,
+      "amount": 1.2,
+      "unit": "kg",
+      "unitSymbol": "kg",
+      "ingredientName": "benfri fläskkarré"
+    },
+    {
+      "groupId": 2,
+      "amount": 1,
+      "unit": "teaspoon",
+      "unitSymbol": "tsk",
+      "ingredientName": "korianderfrön"
+    },
+    {
+      "groupId": 2,
+      "amount": 2,
+      "unit": "teaspoon",
+      "unitSymbol": "tsk",
+      "ingredientName": "gula senapsfrön"
+    },
+    {
+      "groupId": 2,
+      "amount": 0.5,
+      "unit": "teaspoon",
+      "unitSymbol": "tsk",
+      "ingredientName": "svartpepparkorn"
+    },
+    {
+      "groupId": 2,
+      "amount": 2,
+      "unit": "teaspoon",
+      "unitSymbol": "tsk",
+      "ingredientName": "salt"
+    },
+    {
+      "groupId": 2,
+      "amount": 1,
+      "unit": "teaspoon",
+      "unitSymbol": "tsk",
+      "ingredientName": "chilipeppar"
+    },
+    {
+      "groupId": 2,
+      "amount": 1,
+      "unit": "teaspoon",
+      "unitSymbol": "tsk",
+      "ingredientName": "ingefära"
+    },
+    {
+      "groupId": 2,
+      "amount": 1,
+      "unit": "teaspoon",
+      "unitSymbol": "tsk",
+      "ingredientName": "råsocker"
+    },
+    {
+      "groupId": 3,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "steksky"
+    },
+    {
+      "groupId": 3,
+      "amount": 2,
+      "unit": "dl",
+      "unitSymbol": "dl",
+      "ingredientName": "passerade tomater"
+    },
+    {
+      "groupId": 3,
+      "amount": 2,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "vit balsamvinäger"
+    },
+    {
+      "groupId": 3,
+      "amount": 1,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "hackad persilja"
+    },
+    {
+      "groupId": 4,
+      "amount": 25,
+      "unit": "gram",
+      "unitSymbol": "g",
+      "ingredientName": "jäst"
+    },
+    {
+      "groupId": 4,
+      "amount": 5,
+      "unit": "dl",
+      "unitSymbol": "dl",
+      "ingredientName": "vatten"
+    },
+    {
+      "groupId": 4,
+      "amount": 2,
+      "unit": "teaspoon",
+      "unitSymbol": "tsk",
+      "ingredientName": "salt"
+    },
+    {
+      "groupId": 4,
+      "amount": 1,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "honung eller sirap"
+    },
+    {
+      "groupId": 4,
+      "amount": 2,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "olivolja"
+    },
+    {
+      "groupId": 4,
+      "amount": 13,
+      "unit": "dl",
+      "unitSymbol": "dl",
+      "ingredientName": "vetemjöl"
+    }
+  ],
+  "instructions": [
+    {
+      "groupId": 1,
+      "stepNumber": 1,
+      "instruction": "Lägg bitar av lök och krossad vitlök i en gryta. Mortla korianderfrön, senapsfrön och pepparkorn. Blanda med salt, chili, ingefära och socker."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 2,
+      "instruction": "Snitta köttet på några ställen och gnid in kryddblandningen. Lägg köttet på löken och tillaga under lock i 150 °C i cirka 5 timmar, tills det går att dra isär."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 3,
+      "instruction": "Ta upp köttet. Mixa stekskyn och löken med passerade tomater, vinäger och persilja till en sås."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 4,
+      "instruction": "Blanda bröddegens ingredienser till en smidig deg. Jäs under bakduk i 1 timme. Dela i 8 bollar och kavla ut till rundlar, cirka 10 cm. Grädda mitt i ugnen i 250 °C i cirka 8 minuter."
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "id_name": "kofta_curry",
+  "id": 44,
+  "title": "Kofta curry",
+  "serves": null,
+  "ingredients": [
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "piece",
+      "unitSymbol": "st",
+      "ingredientName": "gul lök"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "can",
+      "unitSymbol": "burk",
+      "ingredientName": "krossade tomater"
+    },
+    {
+      "groupId": 1,
+      "amount": 2,
+      "unit": "piece",
+      "unitSymbol": "st",
+      "ingredientName": "vitlöksklyftor"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "curry"
+    },
+    {
+      "groupId": 1,
+      "amount": 0.5,
+      "unit": "teaspoon",
+      "unitSymbol": "tsk",
+      "ingredientName": "ingefära"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "pinch",
+      "unitSymbol": "krm",
+      "ingredientName": "cayennepeppar"
+    },
+    {
+      "groupId": 1,
+      "amount": 3,
+      "unit": "dl",
+      "unitSymbol": "dl",
+      "ingredientName": "matlagningsyoghurt"
+    },
+    {
+      "groupId": 1,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "smör eller smaklös olja att steka i"
+    },
+    {
+      "groupId": 1,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "gurkmeja och eventuellt köttbuljong eller chili"
+    },
+    {
+      "groupId": 2,
+      "amount": 450,
+      "unit": "gram",
+      "unitSymbol": "g",
+      "ingredientName": "nötfärs eller lammfärs"
+    },
+    {
+      "groupId": 2,
+      "amount": 1,
+      "unit": "piece",
+      "unitSymbol": "st",
+      "ingredientName": "gul lök"
+    },
+    {
+      "groupId": 2,
+      "amount": 1,
+      "unit": "piece",
+      "unitSymbol": "st",
+      "ingredientName": "liten paprika"
+    },
+    {
+      "groupId": 2,
+      "amount": 1,
+      "unit": "piece",
+      "unitSymbol": "st",
+      "ingredientName": "vitlöksklyfta"
+    },
+    {
+      "groupId": 2,
+      "amount": 1,
+      "unit": "piece",
+      "unitSymbol": "st",
+      "ingredientName": "ägg"
+    },
+    {
+      "groupId": 2,
+      "amount": 1,
+      "unit": "teaspoon",
+      "unitSymbol": "tsk",
+      "ingredientName": "malen koriander"
+    },
+    {
+      "groupId": 2,
+      "amount": 2,
+      "unit": "teaspoon",
+      "unitSymbol": "tsk",
+      "ingredientName": "spiskummin"
+    },
+    {
+      "groupId": 2,
+      "amount": 2,
+      "unit": "piece",
+      "unitSymbol": "st",
+      "ingredientName": "kryddnejlikor"
+    },
+    {
+      "groupId": 2,
+      "amount": 1,
+      "unit": "teaspoon",
+      "unitSymbol": "tsk",
+      "ingredientName": "gurkmeja"
+    },
+    {
+      "groupId": 2,
+      "amount": 1,
+      "unit": "pinch",
+      "unitSymbol": "krm",
+      "ingredientName": "malen kardemumma"
+    },
+    {
+      "groupId": 2,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "salt och peppar"
+    }
+  ],
+  "instructions": [
+    {
+      "groupId": 1,
+      "stepNumber": 1,
+      "instruction": "Finhacka lök och vitlök till såsen. Fräs mjuka. Tillsätt tomater, curry, ingefära, cayennepeppar och yoghurt. Rör om och låt sjuda på låg värme."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 2,
+      "instruction": "Finhacka löken och paprikan till köttbullarna. Blanda med färs, kryddor och ägg. Forma små bollar och lägg i såsen."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 3,
+      "instruction": "Sjud under lock i 10–20 minuter beroende på köttbullarnas storlek. Rör om då och då."
+    }
+  ]
+}

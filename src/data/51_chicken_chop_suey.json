@@ -1,0 +1,151 @@
+{
+  "id_name": "chicken_chop_suey",
+  "id": 51,
+  "title": "Chicken chop suey",
+  "serves": null,
+  "ingredients": [
+    {
+      "groupId": 1,
+      "amount": 500,
+      "unit": "gram",
+      "unitSymbol": "g",
+      "ingredientName": "kycklingfilé"
+    },
+    {
+      "groupId": 1,
+      "amount": 1.5,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "majsstärkelse"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "ljus risvinäger"
+    },
+    {
+      "groupId": 2,
+      "amount": 1,
+      "unit": "dl",
+      "unitSymbol": "dl",
+      "ingredientName": "kycklingbuljong"
+    },
+    {
+      "groupId": 2,
+      "amount": 1,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "kinesisk soja"
+    },
+    {
+      "groupId": 2,
+      "amount": 2,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "farinsocker"
+    },
+    {
+      "groupId": 2,
+      "amount": 1,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "majsstärkelse"
+    },
+    {
+      "groupId": 2,
+      "amount": 3,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "ostronsås"
+    },
+    {
+      "groupId": 2,
+      "amount": 0.5,
+      "unit": "teaspoon",
+      "unitSymbol": "tsk",
+      "ingredientName": "risvinäger"
+    },
+    {
+      "groupId": 2,
+      "amount": 1,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "rapsolja"
+    },
+    {
+      "groupId": 3,
+      "amount": 2,
+      "unit": "piece",
+      "unitSymbol": "st",
+      "ingredientName": "morötter"
+    },
+    {
+      "groupId": 3,
+      "amount": 1,
+      "unit": "piece",
+      "unitSymbol": "st",
+      "ingredientName": "gul lök"
+    },
+    {
+      "groupId": 3,
+      "amount": 1,
+      "unit": "piece",
+      "unitSymbol": "st",
+      "ingredientName": "broccoli"
+    },
+    {
+      "groupId": 3,
+      "amount": 1,
+      "unit": "can",
+      "unitSymbol": "burk",
+      "ingredientName": "minimajs"
+    },
+    {
+      "groupId": 3,
+      "amount": 1,
+      "unit": "can",
+      "unitSymbol": "burk",
+      "ingredientName": "bambuskott"
+    },
+    {
+      "groupId": 3,
+      "amount": 2,
+      "unit": "piece",
+      "unitSymbol": "st",
+      "ingredientName": "paprikor"
+    },
+    {
+      "groupId": 3,
+      "amount": 3,
+      "unit": "piece",
+      "unitSymbol": "st",
+      "ingredientName": "vitlöksklyftor"
+    },
+    {
+      "groupId": 4,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "jasminris eller nudlar"
+    }
+  ],
+  "instructions": [
+    {
+      "groupId": 1,
+      "stepNumber": 1,
+      "instruction": "Tärna kycklingen och blanda med risvinäger, lite salt och majsstärkelse. Blanda såsingredienserna i en skål. Hacka grönsakerna."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 2,
+      "instruction": "Stek kycklingen gyllene i olja och lägg åt sidan. Stek lök och morot 1–2 minuter. Tillsätt övriga grönsaker och pressad vitlök och woka tills de mjuknat något."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 3,
+      "instruction": "Tillsätt sås och kyckling och woka ihop. Smaka av med salt och servera med ris eller nudlar."
+    }
+  ]
+}

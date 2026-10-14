@@ -1,0 +1,112 @@
+{
+  "id_name": "panang_curry",
+  "id": 25,
+  "title": "Thailändsk panang curry",
+  "serves": 4,
+  "ingredients": [
+    {
+      "groupId": 1,
+      "amount": 2,
+      "unit": "can",
+      "unitSymbol": "burk",
+      "ingredientName": "kokosmjölk (à 400 ml)"
+    },
+    {
+      "groupId": 1,
+      "amount": 2.5,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "panangcurrypasta"
+    },
+    {
+      "groupId": 1,
+      "amount": 3,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "jordnötssmör"
+    },
+    {
+      "groupId": 1,
+      "amount": 3,
+      "unit": "piece",
+      "unitSymbol": "st",
+      "ingredientName": "kycklingfiléer"
+    },
+    {
+      "groupId": 1,
+      "amount": 2,
+      "unit": "teaspoon",
+      "unitSymbol": "tsk",
+      "ingredientName": "fisksås"
+    },
+    {
+      "groupId": 1,
+      "amount": 4,
+      "unit": "piece",
+      "unitSymbol": "st",
+      "ingredientName": "morötter"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "piece",
+      "unitSymbol": "st",
+      "ingredientName": "röd paprika"
+    },
+    {
+      "groupId": 1,
+      "amount": 4,
+      "unit": "piece",
+      "unitSymbol": "st",
+      "ingredientName": "kaffirlimeblad"
+    },
+    {
+      "groupId": 1,
+      "amount": 3,
+      "unit": "sprig",
+      "unitSymbol": "kvist",
+      "ingredientName": "söt thaibasilika"
+    },
+    {
+      "groupId": 1,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "salt"
+    },
+    {
+      "groupId": 1,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "jasminris till servering"
+    }
+  ],
+  "instructions": [
+    {
+      "groupId": 1,
+      "stepNumber": 1,
+      "instruction": "Häll en burk kokosmjölk i en kastrull och sjud tills mindre än hälften återstår och mjölken tjocknat, cirka 20 minuter. Rör då och då."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 2,
+      "instruction": "Hacka paprika och kyckling. Blanda currypastan med den reducerade kokosmjölken och fräs under omrörning."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 3,
+      "instruction": "Vänd ner kycklingen och stek tills den fått yta. Rör ner jordnötssmör och fräs kort."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 4,
+      "instruction": "Tillsätt den andra burken kokosmjölk, fisksås och limeblad. Sjud under lock i cirka 10 minuter."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 5,
+      "instruction": "Tillsätt paprika och morot, smaka av med salt och sjud 10–15 minuter. Ta från värmen och rör ner thaibasilika. Servera med ris."
+    }
+  ]
+}

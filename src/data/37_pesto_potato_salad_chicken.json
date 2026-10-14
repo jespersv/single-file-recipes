@@ -1,0 +1,114 @@
+{
+  "id_name": "pesto_potato_salad_chicken",
+  "id": 37,
+  "title": "Pestopotatissallad med tomatmarinerad kyckling",
+  "serves": 4,
+  "ingredients": [
+    {
+      "groupId": 1,
+      "amount": 250,
+      "unit": "gram",
+      "unitSymbol": "g",
+      "ingredientName": "körsbärstomater"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "piece",
+      "unitSymbol": "st",
+      "ingredientName": "rödlök"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "piece",
+      "unitSymbol": "st",
+      "ingredientName": "vitlöksklyfta"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "dl",
+      "unitSymbol": "dl",
+      "ingredientName": "olivolja"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "balsamvinäger"
+    },
+    {
+      "groupId": 1,
+      "amount": 600,
+      "unit": "gram",
+      "unitSymbol": "g",
+      "ingredientName": "kycklingfilé"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "kg",
+      "unitSymbol": "kg",
+      "ingredientName": "potatis"
+    },
+    {
+      "groupId": 1,
+      "amount": 3,
+      "unit": "piece",
+      "unitSymbol": "st",
+      "ingredientName": "morötter"
+    },
+    {
+      "groupId": 1,
+      "amount": 75,
+      "unit": "gram",
+      "unitSymbol": "g",
+      "ingredientName": "sockerärtor"
+    },
+    {
+      "groupId": 1,
+      "amount": 100,
+      "unit": "gram",
+      "unitSymbol": "g",
+      "ingredientName": "parmesanost"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "bunch",
+      "unitSymbol": "kruka",
+      "ingredientName": "basilika"
+    },
+    {
+      "groupId": 1,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "salt och peppar"
+    }
+  ],
+  "instructions": [
+    {
+      "groupId": 1,
+      "stepNumber": 1,
+      "instruction": "Värm ugnen till 225 °C. Koka upp saltat vatten. Halvera tomaterna."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 2,
+      "instruction": "Mixa 10 tomathalvor med vitlök, 2 msk olja, vinäger, salt och peppar. Blanda kycklingen med marinaden och tillaga i ugnsform i 20–25 minuter."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 3,
+      "instruction": "Skala och tärna potatisen. Skär morötterna i stavar och koka i 10–15 minuter. Häll av och vänd ner sockerärtorna."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 4,
+      "instruction": "Mixa basilika, parmesan, resterande olja, salt och peppar till pesto. Blanda pesto med potatis, morötter, sockerärtor, lök och resterande tomater. Servera med kycklingen."
+    }
+  ]
+}

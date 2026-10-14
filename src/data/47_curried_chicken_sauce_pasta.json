@@ -1,0 +1,102 @@
+{
+  "id_name": "curried_chicken_sauce_pasta",
+  "id": 47,
+  "title": "Pasta med curry- och kycklingsås",
+  "serves": 6,
+  "ingredients": [
+    {
+      "groupId": 1,
+      "amount": 500,
+      "unit": "gram",
+      "unitSymbol": "g",
+      "ingredientName": "pasta"
+    },
+    {
+      "groupId": 1,
+      "amount": 500,
+      "unit": "gram",
+      "unitSymbol": "g",
+      "ingredientName": "kycklingfilé"
+    },
+    {
+      "groupId": 1,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "smör"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "piece",
+      "unitSymbol": "st",
+      "ingredientName": "lök"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "piece",
+      "unitSymbol": "st",
+      "ingredientName": "vitlök"
+    },
+    {
+      "groupId": 1,
+      "amount": 4,
+      "unit": "dl",
+      "unitSymbol": "dl",
+      "ingredientName": "crème fraiche"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "dl",
+      "unitSymbol": "dl",
+      "ingredientName": "grädde"
+    },
+    {
+      "groupId": 1,
+      "amount": 1.5,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "kycklingfond"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "curry"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "paprikapulver"
+    },
+    {
+      "groupId": 1,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "salt, peppar och sriracha"
+    }
+  ],
+  "instructions": [
+    {
+      "groupId": 1,
+      "stepNumber": 1,
+      "instruction": "Koka pastan enligt anvisning. Grovhacka lök och vitlök och stek mjukt i smör. Tillsätt kryddorna och stek 1 minut."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 2,
+      "instruction": "Skär kycklingen i bitar och stek tills den är klar. Tillsätt fond och låt koka in något. Rör ner grädde och crème fraiche."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 3,
+      "instruction": "Smaka av med salt, peppar och sriracha. Servera med pastan."
+    }
+  ]
+}

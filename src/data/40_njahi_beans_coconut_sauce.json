@@ -1,0 +1,142 @@
+{
+  "id_name": "njahi_beans_coconut_sauce",
+  "id": 40,
+  "title": "Njahi – kenyanska bönor i kokossås",
+  "serves": null,
+  "ingredients": [
+    {
+      "groupId": 1,
+      "amount": 5,
+      "unit": "dl",
+      "unitSymbol": "dl",
+      "ingredientName": "njahibönor eller svarta bönor"
+    },
+    {
+      "groupId": 1,
+      "amount": 60,
+      "unit": "ml",
+      "unitSymbol": "ml",
+      "ingredientName": "neutral olja"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "piece",
+      "unitSymbol": "st",
+      "ingredientName": "rödlök"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "piece",
+      "unitSymbol": "st",
+      "ingredientName": "grön paprika"
+    },
+    {
+      "groupId": 1,
+      "amount": 6,
+      "unit": "piece",
+      "unitSymbol": "st",
+      "ingredientName": "vitlöksklyftor"
+    },
+    {
+      "groupId": 1,
+      "amount": 4,
+      "unit": "piece",
+      "unitSymbol": "st",
+      "ingredientName": "salladslökar"
+    },
+    {
+      "groupId": 1,
+      "amount": 2,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "riven ingefära"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "spiskumminfrön"
+    },
+    {
+      "groupId": 1,
+      "amount": 3,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "tomatpuré"
+    },
+    {
+      "groupId": 1,
+      "amount": 2,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "garam masala"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "piece",
+      "unitSymbol": "st",
+      "ingredientName": "jalapeño"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "paprikapulver"
+    },
+    {
+      "groupId": 1,
+      "amount": 0.5,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "gurkmeja"
+    },
+    {
+      "groupId": 1,
+      "amount": 400,
+      "unit": "ml",
+      "unitSymbol": "ml",
+      "ingredientName": "kokosmjölk"
+    },
+    {
+      "groupId": 1,
+      "amount": 0.6,
+      "unit": "dl",
+      "unitSymbol": "dl",
+      "ingredientName": "koriander"
+    },
+    {
+      "groupId": 1,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "salt"
+    }
+  ],
+  "instructions": [
+    {
+      "groupId": 1,
+      "stepNumber": 1,
+      "instruction": "Lägg bönorna i blöt i saltat vatten i cirka 8 timmar eller över natten. Skölj och koka i nytt vatten: koka kraftigt i 10 minuter och sjud sedan tills bönorna är mjuka, 1½–4 timmar. Spara minst 4,75 dl kokspad."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 2,
+      "instruction": "Hetta upp oljan i en gryta. Fräs lök och paprika i cirka 4 minuter. Tillsätt vitlök, salladslök, ingefära och spiskummin och fräs cirka 2 minuter."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 3,
+      "instruction": "Rör ner tomatpuré, garam masala, jalapeño, paprika, gurkmeja och salt. Fräs cirka 2 minuter."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 4,
+      "instruction": "Rör i kokosmjölken, bönorna och cirka 2,35 dl kokspad. Smaka av med salt och sjud utan lock i 30–60 minuter tills såsen är krämig. Rör ner koriander före servering."
+    }
+  ]
+}

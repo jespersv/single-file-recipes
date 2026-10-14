@@ -1,0 +1,62 @@
+{
+  "id_name": "pickled_cucumber",
+  "id": 35,
+  "title": "Pressgurka",
+  "serves": null,
+  "ingredients": [
+    {
+      "groupId": 1,
+      "amount": 0.5,
+      "unit": "piece",
+      "unitSymbol": "st",
+      "ingredientName": "gurka"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "ättika (12 %)"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "dl",
+      "unitSymbol": "dl",
+      "ingredientName": "vatten"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "socker"
+    },
+    {
+      "groupId": 1,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "salt och peppar"
+    },
+    {
+      "groupId": 1,
+      "amount": 2,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "hackad persilja"
+    }
+  ],
+  "instructions": [
+    {
+      "groupId": 1,
+      "stepNumber": 1,
+      "instruction": "Skiva gurkan tunt med osthyvel."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 2,
+      "instruction": "Blanda med övriga ingredienser och smaka av med salt och peppar. Låt stå cirka 1 timme före servering."
+    }
+  ]
+}

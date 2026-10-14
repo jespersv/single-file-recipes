@@ -1,0 +1,60 @@
+{
+  "id_name": "lemon_sorbet",
+  "id": 50,
+  "title": "Citronsorbet",
+  "serves": null,
+  "ingredients": [
+    {
+      "groupId": 1,
+      "amount": 200,
+      "unit": "gram",
+      "unitSymbol": "g",
+      "ingredientName": "socker"
+    },
+    {
+      "groupId": 1,
+      "amount": 2,
+      "unit": "dl",
+      "unitSymbol": "dl",
+      "ingredientName": "vatten"
+    },
+    {
+      "groupId": 1,
+      "amount": 2,
+      "unit": "dl",
+      "unitSymbol": "dl",
+      "ingredientName": "pressad citron"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "piece",
+      "unitSymbol": "st",
+      "ingredientName": "citronskal"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "mascarpone, rågad"
+    }
+  ],
+  "instructions": [
+    {
+      "groupId": 1,
+      "stepNumber": 1,
+      "instruction": "Koka upp socker och vatten. Sjud cirka 5 minuter tills lagen är klar. Ta från värmen och låt svalna cirka 15 minuter."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 2,
+      "instruction": "Tillsätt citronsaft, citronskal och mascarpone. Rör tills allt blandats. Smaka av och tillsätt eventuellt mer socker."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 3,
+      "instruction": "Kyl blandningen cirka 1 timme och kör i glassmaskin. Utan glassmaskin: frys i en form och rör om med gaffel minst varje timme tills sorbeten fryst, cirka 3 timmar."
+    }
+  ]
+}

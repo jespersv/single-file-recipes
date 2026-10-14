@@ -1,0 +1,64 @@
+{
+  "id_name": "school_dill_sauce",
+  "id": 30,
+  "title": "Skolans dillsås",
+  "serves": 4,
+  "ingredients": [
+    {
+      "groupId": 1,
+      "amount": 5,
+      "unit": "dl",
+      "unitSymbol": "dl",
+      "ingredientName": "gräddfil"
+    },
+    {
+      "groupId": 1,
+      "amount": 3,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "majonnäs"
+    },
+    {
+      "groupId": 1,
+      "amount": 4,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "bostongurka"
+    },
+    {
+      "groupId": 1,
+      "amount": 4,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "fryst dill"
+    },
+    {
+      "groupId": 1,
+      "amount": 0.5,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "pressad citronsaft"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "pinch",
+      "unitSymbol": "nypa",
+      "ingredientName": "socker"
+    },
+    {
+      "groupId": 1,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "salt"
+    }
+  ],
+  "instructions": [
+    {
+      "groupId": 1,
+      "stepNumber": 1,
+      "instruction": "Rör ihop gräddfil, majonnäs, bostongurka, dill och citronsaft. Smaka av med socker och salt."
+    }
+  ]
+}

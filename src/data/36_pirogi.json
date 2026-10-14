@@ -1,0 +1,135 @@
+{
+  "id_name": "pirogi",
+  "id": 36,
+  "title": "Piroger",
+  "serves": null,
+  "ingredients": [
+    {
+      "groupId": 1,
+      "amount": 50,
+      "unit": "gram",
+      "unitSymbol": "g",
+      "ingredientName": "jäst"
+    },
+    {
+      "groupId": 1,
+      "amount": 5,
+      "unit": "dl",
+      "unitSymbol": "dl",
+      "ingredientName": "standardmjölk"
+    },
+    {
+      "groupId": 1,
+      "amount": 200,
+      "unit": "gram",
+      "unitSymbol": "g",
+      "ingredientName": "smör"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "pinch",
+      "unitSymbol": "nypa",
+      "ingredientName": "strösocker"
+    },
+    {
+      "groupId": 1,
+      "amount": 1.5,
+      "unit": "teaspoon",
+      "unitSymbol": "tsk",
+      "ingredientName": "salt"
+    },
+    {
+      "groupId": 1,
+      "amount": 13,
+      "unit": "dl",
+      "unitSymbol": "dl",
+      "ingredientName": "vetemjöl special, plus till utbakning"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "piece",
+      "unitSymbol": "st",
+      "ingredientName": "uppvispat ägg"
+    },
+    {
+      "groupId": 2,
+      "amount": 600,
+      "unit": "gram",
+      "unitSymbol": "g",
+      "ingredientName": "köttfärs"
+    },
+    {
+      "groupId": 2,
+      "amount": 1,
+      "unit": "piece",
+      "unitSymbol": "st",
+      "ingredientName": "gul lök"
+    },
+    {
+      "groupId": 2,
+      "amount": 2,
+      "unit": "piece",
+      "unitSymbol": "st",
+      "ingredientName": "vitlöksklyftor"
+    },
+    {
+      "groupId": 2,
+      "amount": 1,
+      "unit": "can",
+      "unitSymbol": "burk",
+      "ingredientName": "krossade tomater"
+    },
+    {
+      "groupId": 2,
+      "amount": 2,
+      "unit": "teaspoon",
+      "unitSymbol": "tsk",
+      "ingredientName": "kinesisk soja"
+    },
+    {
+      "groupId": 2,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "vinäger"
+    },
+    {
+      "groupId": 2,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "salt och peppar"
+    },
+    {
+      "groupId": 2,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "riven ost"
+    }
+  ],
+  "instructions": [
+    {
+      "groupId": 1,
+      "stepNumber": 1,
+      "instruction": "Värm ugnen till 225 °C. Smält smöret, häll i mjölken och värm till 37 °C. Smula jästen i en bunke och lös upp den med lite av mjölkblandningen."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 2,
+      "instruction": "Blanda ner resten av mjölken, socker, salt och nästan allt mjöl. Arbeta degen smidig och låt jäsa under duk i 45 minuter."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 3,
+      "instruction": "Fräs hackad lök i smör tills den mjuknar. Bryn färsen och låt sjuda med pressad vitlök, tomater och soja. Smaka av med salt och peppar och koka bort vätskan."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 4,
+      "instruction": "Kavla ut degen, lägg på fyllning och ost, vik ihop och nyp kanterna. Pensla med uppvispat ägg och grädda tills gyllene."
+    }
+  ]
+}

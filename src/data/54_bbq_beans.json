@@ -1,0 +1,156 @@
+{
+  "id_name": "bbq_beans",
+  "id": 54,
+  "title": "BBQ beans",
+  "serves": null,
+  "ingredients": [
+    {
+      "groupId": 1,
+      "amount": 400,
+      "unit": "gram",
+      "unitSymbol": "g",
+      "ingredientName": "blandade bönor"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "piece",
+      "unitSymbol": "skiva",
+      "ingredientName": "bacon"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "piece",
+      "unitSymbol": "st",
+      "ingredientName": "stor gul lök"
+    },
+    {
+      "groupId": 1,
+      "amount": 2,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "grön paprika"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "urkärnad jalapeño"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "piece",
+      "unitSymbol": "st",
+      "ingredientName": "vitlöksklyfta"
+    },
+    {
+      "groupId": 2,
+      "amount": 2.5,
+      "unit": "dl",
+      "unitSymbol": "dl",
+      "ingredientName": "ketchup"
+    },
+    {
+      "groupId": 2,
+      "amount": 2,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "tomatpuré"
+    },
+    {
+      "groupId": 2,
+      "amount": 1.5,
+      "unit": "dl",
+      "unitSymbol": "dl",
+      "ingredientName": "farinsocker"
+    },
+    {
+      "groupId": 2,
+      "amount": 1.5,
+      "unit": "dl",
+      "unitSymbol": "dl",
+      "ingredientName": "äppeljuice"
+    },
+    {
+      "groupId": 2,
+      "amount": 0.5,
+      "unit": "dl",
+      "unitSymbol": "dl",
+      "ingredientName": "honung"
+    },
+    {
+      "groupId": 2,
+      "amount": 2,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "mörk sirap"
+    },
+    {
+      "groupId": 2,
+      "amount": 1,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "äppelcidervinäger"
+    },
+    {
+      "groupId": 2,
+      "amount": 1,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "BBQ-krydda"
+    },
+    {
+      "groupId": 2,
+      "amount": 1,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "gul senap"
+    },
+    {
+      "groupId": 2,
+      "amount": 1,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "stark sås"
+    },
+    {
+      "groupId": 2,
+      "amount": 2,
+      "unit": "drop",
+      "unitSymbol": "droppe",
+      "ingredientName": "liquid smoke"
+    },
+    {
+      "groupId": 2,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "salt och svartpeppar"
+    }
+  ],
+  "instructions": [
+    {
+      "groupId": 1,
+      "stepNumber": 1,
+      "instruction": "Värm ugnen till 150 °C. Tärna bacon och stek knaprigt. Ta upp och spara fettet."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 2,
+      "instruction": "Fräs finhackad lök i baconfettet tills mjuk och lätt brynt, cirka 7 minuter. Tillsätt hackad paprika, jalapeño och vitlök och fräs cirka 1 minut."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 3,
+      "instruction": "Rör ner ketchup, tomatpuré, socker, äppeljuice, honung, sirap, vinäger, BBQ-krydda, senap, stark sås, liquid smoke och bacon. Koka upp och vänd ner avrunna bönor."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 4,
+      "instruction": "Tillaga i ugnen cirka 50 minuter. Låt vila 15 minuter och smaka av med salt och peppar."
+    }
+  ]
+}

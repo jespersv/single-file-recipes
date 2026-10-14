@@ -1,0 +1,72 @@
+{
+  "id_name": "lebanese_bread",
+  "id": 42,
+  "title": "Libanesiskt bröd",
+  "serves": null,
+  "ingredients": [
+    {
+      "groupId": 1,
+      "amount": 4.5,
+      "unit": "dl",
+      "unitSymbol": "dl",
+      "ingredientName": "fint vetemjöl"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "teaspoon",
+      "unitSymbol": "tsk",
+      "ingredientName": "salt"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "teaspoon",
+      "unitSymbol": "tsk",
+      "ingredientName": "strösocker"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "torrjäst"
+    },
+    {
+      "groupId": 1,
+      "amount": 2.25,
+      "unit": "dl",
+      "unitSymbol": "dl",
+      "ingredientName": "varmt vatten"
+    },
+    {
+      "groupId": 1,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "neutral olja"
+    }
+  ],
+  "instructions": [
+    {
+      "groupId": 1,
+      "stepNumber": 1,
+      "instruction": "Blanda ingredienserna och arbeta ihop degen. Knåda med handflatan tills den är slät."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 2,
+      "instruction": "Täck degen och låt vila 30 minuter. Dela i små bollar och låt vila 20 minuter."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 3,
+      "instruction": "Kavla ut bollarna och låt vila ytterligare 20 minuter."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 4,
+      "instruction": "Grädda i 250 °C i cirka 5 minuter, tills bröden blåst upp. Låt svalna och förvara i plastpåse."
+    }
+  ]
+}

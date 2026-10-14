@@ -1,0 +1,93 @@
+{
+  "id_name": "pickled_vasteras_cucumbers",
+  "id": 23,
+  "title": "Västeråsgurkor",
+  "serves": null,
+  "ingredients": [
+    {
+      "groupId": 1,
+      "amount": 2,
+      "unit": "kg",
+      "unitSymbol": "kg",
+      "ingredientName": "Västeråsgurkor"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "dl",
+      "unitSymbol": "dl",
+      "ingredientName": "pepparrot"
+    },
+    {
+      "groupId": 1,
+      "amount": 3,
+      "unit": "tablespoon",
+      "unitSymbol": "msk",
+      "ingredientName": "gula senapsfrön"
+    },
+    {
+      "groupId": 1,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "krondill"
+    },
+    {
+      "groupId": 2,
+      "amount": 9,
+      "unit": "dl",
+      "unitSymbol": "dl",
+      "ingredientName": "socker"
+    },
+    {
+      "groupId": 2,
+      "amount": 1,
+      "unit": "liter",
+      "unitSymbol": "l",
+      "ingredientName": "vatten"
+    },
+    {
+      "groupId": 2,
+      "amount": 2.4,
+      "unit": "dl",
+      "unitSymbol": "dl",
+      "ingredientName": "ättika (24 %)"
+    },
+    {
+      "groupId": 2,
+      "amount": 1,
+      "unit": "dl",
+      "unitSymbol": "dl",
+      "ingredientName": "salt"
+    },
+    {
+      "groupId": 2,
+      "amount": 0.5,
+      "unit": "teaspoon",
+      "unitSymbol": "tsk",
+      "ingredientName": "natriumbensoat"
+    }
+  ],
+  "instructions": [
+    {
+      "groupId": 1,
+      "stepNumber": 1,
+      "instruction": "Skiva gurkorna och finhacka pepparroten."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 2,
+      "instruction": "Koka upp socker, vatten, ättika och salt. Låt lagen klarna och rör sedan i natriumbensoat."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 3,
+      "instruction": "Varva gurka, dill, pepparrot och senapsfrön. Häll över lagen."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 4,
+      "instruction": "Förvara i kyl i cirka fem veckor före servering."
+    }
+  ]
+}

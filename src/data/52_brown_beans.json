@@ -1,0 +1,62 @@
+{
+  "id_name": "brown_beans",
+  "id": 52,
+  "title": "Bruna bönor",
+  "serves": null,
+  "ingredients": [
+    {
+      "groupId": 1,
+      "amount": 2,
+      "unit": "package",
+      "unitSymbol": "packet",
+      "ingredientName": "bruna bönor"
+    },
+    {
+      "groupId": 1,
+      "amount": 2.5,
+      "unit": "liter",
+      "unitSymbol": "l",
+      "ingredientName": "vatten"
+    },
+    {
+      "groupId": 1,
+      "amount": 2,
+      "unit": "teaspoon",
+      "unitSymbol": "tsk",
+      "ingredientName": "salt"
+    },
+    {
+      "groupId": 1,
+      "amount": 1,
+      "unit": "dl",
+      "unitSymbol": "dl",
+      "ingredientName": "sirap"
+    },
+    {
+      "groupId": 1,
+      "amount": 0.5,
+      "unit": "dl",
+      "unitSymbol": "dl",
+      "ingredientName": "ättika (12 %)"
+    },
+    {
+      "groupId": 1,
+      "amount": null,
+      "unit": null,
+      "unitSymbol": null,
+      "ingredientName": "potatismjöl vid behov"
+    }
+  ],
+  "instructions": [
+    {
+      "groupId": 1,
+      "stepNumber": 1,
+      "instruction": "Koka bönor, vatten och salt på låg värme i cirka 10 timmar."
+    },
+    {
+      "groupId": 1,
+      "stepNumber": 2,
+      "instruction": "Tillsätt sirap och ättika. Smaka av med mer sirap och ättika. Red med potatismjöl om det behövs."
+    }
+  ]
+}
